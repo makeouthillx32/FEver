@@ -50,11 +50,9 @@ const Video = () => {
       </div>
 
       <ModalVideo
-        channel="youtube"
-        autoplay={true}
-        start={true}
+        channel={"custom"}
+        url={"./images/video/Cube.mp4"}
         isOpen={isOpen}
-        videoId="L61p2uyiMSo"
         onClose={() => setOpen(false)}
       />
 

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
 const Footer = () => {
   return (
     <>
@@ -12,13 +11,7 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
-                  <Image
-                    src="/keensight-logo.svg"
-                    alt="logo"
-                    width={140}
-                    height={30}
-                    className="dark:invert-none w-full invert filter dark:filter-none"
-                  />
+                  <Image src="/logo.svg" alt="logo" width={200} height={100} />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
