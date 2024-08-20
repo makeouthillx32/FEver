@@ -26,7 +26,7 @@ const Video = () => {
               data-wow-delay=".15s"
             >
               <div className="relative aspect-[77/40] items-center justify-center">
-                <Image src="/images/video/video.jpg" alt="video image" fill />
+                <Image src="/video/video.jpg" alt="video image" fill />
                 <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
                   <button
                     aria-label="video play button"
@@ -51,12 +51,12 @@ const Video = () => {
 
       <ModalVideo
         channel={"custom"}
-        url={"./images/video/Cube.mp4"}
+        url={"./video/Cube.mp4"}
         isOpen={isOpen}
         onClose={() => setOpen(false)}
       />
 
-      <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
+      <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
     </section>
   );
 };

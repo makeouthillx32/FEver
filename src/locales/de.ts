@@ -7,7 +7,7 @@ export default {
     blog: "Blog",
     support: "Kontakt",
     services: {
-      title: "Services",
+      title: "Dienstleistungen",
       submenu: {
         about: "Über uns Seite",
         contact: "Kontakt Seite",

@@ -8,8 +8,7 @@ import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import { ReactElement } from "react";
 import { Providers } from "./providers";
-
-import { I18nProviderClient } from "@/locales/client"; // Adjust the path to your client-side I18nProvider
+import { I18nProviderClient } from "@/locales/client"; 
 import { useCurrentLocale } from "@/locales/client";
 
 const inter = Inter({ subsets: ["latin"] });
