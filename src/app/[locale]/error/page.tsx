@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-
 const ErrorPage = () => {
   return (
     <>

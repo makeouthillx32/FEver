@@ -5,10 +5,12 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import { useChangeLocale } from "@/locales/client";
-import useMenuData from "./useMenuData";
+import useMenuData from "@/data/useMenuData";
+import useServiceData from "@/data/useServiceData";
 
 const Header = () => {
   const menuData = useMenuData();
+  const serviceData = useServiceData();
 
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -31,7 +33,7 @@ const Header = () => {
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
-  
+
   const handleSubmenu = (index: number) => {
     if (openIndex === index) {
       setOpenIndex(-1);
@@ -60,12 +62,7 @@ const Header = () => {
                 sticky ? "py-5 lg:py-2" : "py-8"
               } `}
             >
-              <Image
-                src="/logo.svg"
-                alt="logo"
-                width={150}
-                height={100}
-              />
+              <Image src="/logo.svg" alt="logo" width={150} height={100} />
             </Link>
           </div>
           <div className="flex w-full items-center justify-between px-4">
@@ -137,14 +134,24 @@ const Header = () => {
                               openIndex === index ? "block" : "hidden"
                             }`}
                           >
-                            {menuItem.submenu?.map((submenuItem, index) => (
-                              <Link
-                                href={submenuItem.path || "#"}
-                                key={index}
-                                className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
-                              >
-                                {submenuItem.title}
-                              </Link>
+                            {serviceData.map((serviceItem) => (
+                              <div key={serviceItem.title}>
+                                <p className="block rounded py-2.5 text-xl text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3">
+                                  {serviceItem.title}
+                                </p>
+
+                                {serviceItem.subServices.map(
+                                  (subServiceItem) => (
+                                    <Link
+                                      key={subServiceItem.title}
+                                      href={subServiceItem.path}
+                                      className="block rounded py-2 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-6"
+                                    >
+                                      {subServiceItem.title}
+                                    </Link>
+                                  ),
+                                )}
+                              </div>
                             ))}
                           </div>
                         </>

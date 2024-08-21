@@ -1,5 +1,5 @@
 import { useScopedI18n } from "@/locales/client";
-import { Menu } from "@/types/menu";
+import { Menu } from "@/types";
 
 const useMenuData = (): Menu[] => {
   const t = useScopedI18n("menu");

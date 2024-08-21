@@ -5,6 +5,7 @@ import NewsLatterBox from "@/components/Contact/NewsLatterBox";
 import Image from "next/image";
 
 import { Metadata } from "next";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
@@ -15,22 +16,16 @@ export const metadata: Metadata = {
 const Blog = () => {
   return (
     <>
+      <Breadcrumb
+        pageName="Blog"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+      />
       <section className="overflow-hidden pb-[120px] pt-[180px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h1 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-                  10 amazing sites to download stock photos & digital assets for
-                  free
-                </h1>
-
                 <div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat.
-                  </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                       <Image

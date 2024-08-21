@@ -5,17 +5,33 @@ export default {
     home: "Startseite",
     about: "Über Uns",
     blog: "Blog",
-    support: "Kontakt",
-    services: {
-      title: "Dienstleistungen",
-      submenu: {
-        about: "Über uns Seite",
-        contact: "Kontakt Seite",
-        blogGrid: "Blog Rasterseite",
-        blogSidebar: "Blog Seitenleiste",
-        blogDetails: "Blog Detailseite",
-        error: "Fehlerseite",
-      },
+    contact: "Kontakt",
+    services: "Dienstleistungen",
+  },
+
+  ourServices: {
+    title: "Unsere Dienstleistungen",
+    paragraph:
+      "Ob etablierter Spritzgießbetrieb oder junges Startup Ihre Wünsche in puncto Formenbau werden aus einer Hand bedient.",
+  },
+
+  services: {
+    formen: {
+      title: "Formtechnik",
+      paragraph: "lorem",
+      subServices: [{ title: "", paragraph: "" }],
+    },
+
+    auf: {
+      title: "Aufwertung",
+      paragraph: "",
+      subServices: [{ title: "", paragraph: "" }],
+    },
+
+    fert: {
+      title: "Fertigung",
+      paragraph: "",
+      subServices: [{ title: "", paragraph: "" }],
     },
   },
 } as const;

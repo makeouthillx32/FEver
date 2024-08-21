@@ -5,17 +5,33 @@ export default {
     home: "Home",
     about: "About",
     blog: "Blog",
-    support: "Contact",
-    services: {
-      title: "Services",
-      submenu: {
-        about: "About Page",
-        contact: "Contact Page",
-        blogGrid: "Blog Grid Page",
-        blogSidebar: "Blog Sidebar Page",
-        blogDetails: "Blog Details Page",
-        error: "Error Page",
-      },
+    contact: "Contact",
+    services: "Services",
+  },
+
+  ourServices: {
+    title: "Our Services",
+    paragraph:
+      "Whether you are an established injection molding company or a young start-up we are your one-stop shop when it comes to mold making.",
+  },
+
+  services: {
+    formen: {
+      title: "Form technique",
+      paragraph: "lorem",
+      subServices: [{ title: "", paragraph: "" }],
+    },
+
+    auf: {
+      title: "Aufwertung",
+      paragraph: "",
+      subServices: [{ title: "", paragraph: "" }],
+    },
+
+    fert: {
+      title: "Fertigung",
+      paragraph: "",
+      subServices: [{ title: "", paragraph: "" }],
     },
   },
 } as const;
