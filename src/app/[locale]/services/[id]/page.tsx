@@ -1,26 +1,32 @@
+"use client";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 import RelatedPost from "@/components/Services/RelatedPost";
 import SharePost from "@/components/Services/SharePost";
 import TagButton from "@/components/Services/TagButton";
-import NewsLatterBox from "@/components/Contact/NewsLatterBox";
+import useServicesData from "@/data/useServiceData";
 import Image from "next/image";
+import { useParams, useRouter } from "next/navigation";
 
-import { Metadata } from "next";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+export default function ServicePage() {
+  const { id } = useParams();
+  const router = useRouter();
+  const serviceData = useServicesData();
 
-export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
-  // other metadata
-};
+  const subservice = serviceData
+    .flatMap((service) => service.subServices)
+    .find((subservice) => subservice.path === `/${id}`);
 
-const Blog = () => {
+  if (!subservice) {
+    router.push("/error");
+    return null;
+  }
+
+  const { title, image, paragraph } = subservice;
+
   return (
     <>
-      <Breadcrumb
-        pageName="Blog"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
-      <section className="overflow-hidden pb-[120px] pt-[180px]">
+      <Breadcrumb pageName={title} description={paragraph} />
+      <section className="overflow-hidden pb-[120px] ">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-8/12">
@@ -302,14 +308,10 @@ const Blog = () => {
                   <TagButton text="Business" />
                 </div>
               </div>
-
-              <NewsLatterBox />
             </div>
           </div>
         </div>
       </section>
     </>
   );
-};
-
-export default Blog;
+}

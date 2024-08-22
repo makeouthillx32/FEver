@@ -144,7 +144,7 @@ const Header = () => {
                                   (subServiceItem) => (
                                     <Link
                                       key={subServiceItem.title}
-                                      href={subServiceItem.path}
+                                      href={`/services/${subServiceItem.path}`}
                                       className="block rounded py-2 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-6"
                                     >
                                       {subServiceItem.title}
