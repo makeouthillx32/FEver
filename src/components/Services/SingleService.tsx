@@ -2,7 +2,7 @@ import { Services } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-const SingleBlog = ({ service }: { service: Services }) => {
+const SingleService = ({ service }: { service: Services }) => {
   const { title, image, paragraph, tags, subServices } = service;
   console.log("🚀  service:", service);
 
@@ -31,7 +31,7 @@ const SingleBlog = ({ service }: { service: Services }) => {
 
       {/* Hover Overlay */}
       <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <div className="space-y-4 text-center flex flex-col">
+        <div className="flex flex-col space-y-4 text-center">
           {subServices.map((subService) => (
             <Link
               key={subService.title}
@@ -47,4 +47,4 @@ const SingleBlog = ({ service }: { service: Services }) => {
   );
 };
 
-export default SingleBlog;
+export default SingleService;

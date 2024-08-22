@@ -1,8 +1,9 @@
 "use client";
 import SectionTitle from "../Common/SectionTitle";
-import SingleBlog from "./SingleBlog";
+
 import useServicesData from "@/data/useServiceData";
 import { useScopedI18n } from "@/locales/client";
+import SingleService from "./SingleService";
 
 const Services = () => {
   const servicesData = useServicesData();
@@ -14,16 +15,12 @@ const Services = () => {
       className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28"
     >
       <div className="container">
-        <SectionTitle
-          title={t("title")}
-        paragraph={t("paragraph")}
-          center
-        />
+        <SectionTitle title={t("title")} paragraph={t("paragraph")} center />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
           {servicesData.map((service) => (
             <div key={service.title} className="w-full">
-              <SingleBlog service={service} />
+              <SingleService service={service} />
             </div>
           ))}
         </div>
