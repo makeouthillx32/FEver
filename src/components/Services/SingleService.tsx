@@ -30,12 +30,12 @@ const SingleService = ({ service }: { service: Services }) => {
       </div>
 
       {/* Hover Overlay */}
-      <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+      <div className="absolute z-30 inset-0 flex items-center justify-center bg-white bg-opacity-70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <div className="flex flex-col space-y-4 text-center">
           {subServices.map((subService) => (
             <Link
               key={subService.title}
-              href={subService.path}
+              href={`services/${subService.path}`}
               className="inline-block rounded-full bg-primary px-4 py-2 text-white transition-transform duration-300 hover:scale-105"
             >
               {subService.title}

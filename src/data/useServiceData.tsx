@@ -9,7 +9,7 @@ const useServicesData = (): Services[] => {
       title: t("formen.title"),
       paragraph: t("formen.paragraph"),
       image: "/images/blog/blog-01.jpg",
-      tags: [""],
+      tags: ["Formentechnik"],
       subServices: [
         {
           title: "Beratung",
@@ -35,7 +35,7 @@ const useServicesData = (): Services[] => {
       title: "Aufwertung",
       paragraph: "lorem ipsum dolor sit amet",
       image: "/images/blog/blog-02.jpg",
-      tags: [""],
+      tags: ["Aufwertung"],
       subServices: [
         {
           title: "Hochglanz",
@@ -61,7 +61,7 @@ const useServicesData = (): Services[] => {
       title: "Fertig",
       paragraph: "lorem ipsum dolor sit amet",
       image: "/images/blog/blog-03.jpg",
-      tags: [""],
+      tags: ["Fertig"],
       subServices: [
         {
           title: "Frasen",
