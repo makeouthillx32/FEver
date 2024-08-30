@@ -58,6 +58,22 @@ module.exports = {
         },
       },
 
+      fontSize: {
+        'xs': '0.875rem',    // 14px (increased from 12px)
+        'sm': '1rem',        // 16px (increased from 14px)
+        'base': '1.125rem',  // 18px (increased from 16px)
+        'lg': '1.25rem',     // 20px (increased from 18px)
+        'xl': '1.375rem',    // 22px (increased from 20px)
+        '2xl': '1.75rem',    // 28px (increased from 24px)
+        '3xl': '2.125rem',   // 34px (increased from 30px)
+        '4xl': '2.5rem',     // 40px (increased from 36px)
+        '5xl': '3.125rem',   // 50px (increased from 48px)
+        '6xl': '3.875rem',   // 62px (increased from 60px)
+        '7xl': '4.875rem',   // 78px (increased from 72px)
+        '8xl': '6.125rem',   // 98px (increased from 96px)
+        '9xl': '7.625rem',   // 122px (increased from 128px)
+      },
+      
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
         one: "0px 2px 3px rgba(7, 7, 77, 0.05)",

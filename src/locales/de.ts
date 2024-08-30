@@ -10,7 +10,7 @@ export default {
   },
 
   ourServices: {
-    title: "Unsere Dienstleistungen",
+    title: "Unsere Kernbereiche",
     paragraph:
       "Ob etablierter Spritzgießbetrieb oder junges Startup Ihre Wünsche in puncto Formenbau werden aus einer Hand bedient.",
   },

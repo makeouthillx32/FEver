@@ -136,7 +136,7 @@ const Header = () => {
                           >
                             {serviceData.map((serviceItem) => (
                               <div key={serviceItem.title}>
-                                <p className="block rounded py-2.5 text-xl text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3">
+                                <p className="block rounded py-2.5 text-xl text-dark  dark:text-white/70  lg:px-3">
                                   {serviceItem.title}
                                 </p>
 

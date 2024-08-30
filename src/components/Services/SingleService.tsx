@@ -4,7 +4,6 @@ import Link from "next/link";
 
 const SingleService = ({ service }: { service: Services }) => {
   const { title, image, paragraph, tags, subServices } = service;
-  console.log("🚀  service:", service);
 
   return (
     <div className="group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark">
