@@ -3,7 +3,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Inter, Figtree } from "next/font/google";
+import { Inter, Titillium_Web } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import { ReactElement } from "react";
@@ -12,7 +12,7 @@ import { I18nProviderClient } from "@/locales/client";
 import { useCurrentLocale } from "@/locales/client";
 
 const inter = Inter({ subsets: ["latin"] });
-const figtree = Figtree({ subsets: ["latin"] });
+const titillium = Titillium_Web({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function RootLayout({ children }: { children: ReactElement }) {
   const locale = useCurrentLocale();
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactElement }) {
   return (
     <html lang={locale} suppressHydrationWarning={false}>
       <head />
-      <body className={`bg-[#FCFCFC] dark:bg-black ${figtree.className}`}>
+      <body className={`bg-[#FCFCFC] dark:bg-black ${titillium.className}`}>
         <I18nProviderClient locale={locale}>
           <Providers>
             <Header />

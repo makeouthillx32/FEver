@@ -16,23 +16,13 @@ module.exports = {
 
     screens: {
       xs: "450px",
-      // => @media (min-width: 450px) { ... }
-
       sm: "575px",
-      // => @media (min-width: 576px) { ... }
-
       md: "768px",
-      // => @media (min-width: 768px) { ... }
-
       lg: "992px",
-      // => @media (min-width: 992px) { ... }
-
       xl: "1200px",
-      // => @media (min-width: 1200px) { ... }
-
       "2xl": "1400px",
-      // => @media (min-width: 1400px) { ... }
     },
+
     extend: {
       colors: {
         current: "currentColor",
@@ -59,21 +49,21 @@ module.exports = {
       },
 
       fontSize: {
-        'xs': '0.875rem',    // 14px (increased from 12px)
-        'sm': '1rem',        // 16px (increased from 14px)
-        'base': '1.125rem',  // 18px (increased from 16px)
-        'lg': '1.25rem',     // 20px (increased from 18px)
-        'xl': '1.375rem',    // 22px (increased from 20px)
-        '2xl': '1.75rem',    // 28px (increased from 24px)
-        '3xl': '2.125rem',   // 34px (increased from 30px)
-        '4xl': '2.5rem',     // 40px (increased from 36px)
-        '5xl': '3.125rem',   // 50px (increased from 48px)
-        '6xl': '3.875rem',   // 62px (increased from 60px)
-        '7xl': '4.875rem',   // 78px (increased from 72px)
-        '8xl': '6.125rem',   // 98px (increased from 96px)
-        '9xl': '7.625rem',   // 122px (increased from 128px)
+        xs: "0.875rem",
+        sm: "1rem",
+        base: "1.125rem",
+        lg: "1.25rem",
+        xl: "1.375rem",
+        "2xl": "1.75rem",
+        "3xl": "2.125rem",
+        "4xl": "2.5rem",
+        "5xl": "3.125rem",
+        "6xl": "3.875rem",
+        "7xl": "4.875rem",
+        "8xl": "6.125rem",
+        "9xl": "7.625rem",
       },
-      
+
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
         one: "0px 2px 3px rgba(7, 7, 77, 0.05)",
@@ -88,6 +78,7 @@ module.exports = {
         "btn-hover": "0px 1px 2px rgba(0, 0, 0, 0.15)",
         "btn-light": "0px 1px 2px rgba(0, 0, 0, 0.1)",
       },
+
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },

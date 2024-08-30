@@ -4,13 +4,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
-import { useChangeLocale } from "@/locales/client";
+import { useChangeLocale, useCurrentLocale } from "@/locales/client";
 import useMenuData from "@/data/useMenuData";
 import useServiceData from "@/data/useServiceData";
 
 const Header = () => {
   const menuData = useMenuData();
   const serviceData = useServiceData();
+
+  const locale = useCurrentLocale();
+  console.log("🚀  locale:", locale);
 
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
