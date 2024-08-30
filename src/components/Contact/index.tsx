@@ -1,81 +1,97 @@
-import NewsLatterBox from "./NewsLatterBox";
+import ContactCard from "./ContactCard";
+import dynamic from "next/dynamic";
 
-const Contact = () => {
+const Map = dynamic(() => import("./Map"), { ssr: false });
+
+import { getScopedI18n } from "@/locales/server";
+
+const Contact = async () => {
+  const t = await getScopedI18n("contact");
+
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+    <section id="contact" className="overflow-hidden  py-16  md:py-20 lg:py-28">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
+          <div className="w-full px-4 pb-4 lg:w-5/12 xl:w-4/12">
+            <ContactCard />
+          </div>
+
+          <div className="w-full px-4 pb-4 lg:w-7/12 xl:w-8/12">
+            <Map
+              center={[49.707556892870045, 8.84701398118458]}
+              zoom={16}
+              height={400}
+            />
+          </div>
+
+          <div className="w-full px-4 pb-4 lg:w-6/12 xl:w-6/12">
             <div
               className="mb-12 rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s
               "
             >
-              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Need Help? Open a Ticket
+               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+                {t("form.title")}
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                Our support team will get back to you ASAP via email.
+                {t("form.paragraph")}
               </p>
               <form>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
+                    <div className="mb-6">
                       <label
                         htmlFor="name"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                        className="block text-sm font-medium text-dark dark:text-white"
                       >
-                        Your Name
+                        Name
                       </label>
                       <input
                         type="text"
-                        placeholder="Enter your name"
-                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        placeholder="Name"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-4 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:focus:border-primary"
                       />
                     </div>
                   </div>
                   <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
+                    <div className="mb-6">
                       <label
                         htmlFor="email"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                        className="block text-sm font-medium text-dark dark:text-white"
                       >
-                        Your Email
+                        Email
                       </label>
                       <input
                         type="email"
-                        placeholder="Enter your email"
-                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        placeholder="Email"
+                        className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-4 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:focus:border-primary"
                       />
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <div className="mb-8">
+                    <div className="mb-6">
                       <label
                         htmlFor="message"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+                        className="block text-sm font-medium text-dark dark:text-white"
                       >
-                        Your Message
+                        Message
                       </label>
                       <textarea
                         name="message"
                         rows={5}
-                        placeholder="Enter your Message"
-                        className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        placeholder={t("form.textarea")}
+                        className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-4 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:focus:border-primary"
                       ></textarea>
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      Submit Ticket
+                    <button className="rounded-sm bg-primary px-6 py-3 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                      {t("form.submit")}
                     </button>
                   </div>
                 </div>
               </form>
             </div>
-          </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            {/* <NewsLatterBox /> */}
           </div>
         </div>
       </div>

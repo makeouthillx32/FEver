@@ -7,6 +7,7 @@ import ThemeToggler from "./ThemeToggler";
 import { useChangeLocale, useCurrentLocale } from "@/locales/client";
 import useMenuData from "@/data/useMenuData";
 import useServiceData from "@/data/useServiceData";
+import { cn } from "@/utils/cn";
 
 const Header = () => {
   const menuData = useMenuData();
@@ -165,19 +166,31 @@ const Header = () => {
               </nav>
             </div>
             <div className="flex items-center justify-end pr-16 lg:pr-0">
-              <button
-                className="ease-in-up rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
-                onClick={() => changeLocale("en")}
-              >
-                EN
-              </button>
-
-              <button
-                className="px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                onClick={() => changeLocale("de")}
-              >
-                DE
-              </button>
+              {/* Language Selector */}
+              <div className="flex items-center space-x-2 rounded border border-gray-300 bg-gray-100 p-1 dark:border-gray-600 dark:bg-gray-800">
+                <button
+                  className={cn(
+                    "px-4 py-2 text-sm font-medium rounded-sm",
+                    locale === "en"
+                      ? "bg-primary text-white"
+                      : "text-dark hover:bg-opacity-90 dark:text-white"
+                  )}
+                  onClick={() => changeLocale("en")}
+                >
+                  EN
+                </button>
+                <button
+                  className={cn(
+                    "px-4 py-2 text-sm font-medium rounded-sm",
+                    locale === "de"
+                      ? "bg-primary text-white"
+                      : "text-dark hover:bg-opacity-90 dark:text-white"
+                  )}
+                  onClick={() => changeLocale("de")}
+                >
+                  DE
+                </button>
+              </div>
 
               <div>
                 <ThemeToggler />

@@ -3,19 +3,20 @@ import Contact from "@/components/Contact";
 
 import { Metadata } from "next";
 
+import { getScopedI18n } from "@/locales/server";
+
 export const metadata: Metadata = {
   title: "Contact Page | Free Next.js Template for Startup and SaaS",
   description: "This is Contact Page for Startup Nextjs Template",
   // other metadata
 };
 
-const ContactPage = () => {
+const ContactPage = async () => {
+  const t = await getScopedI18n("contact");
+
   return (
     <>
-      <Breadcrumb
-        pageName="Contact Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
+      <Breadcrumb pageName={t("title")} description={t("paragraph")} />
 
       <Contact />
     </>
