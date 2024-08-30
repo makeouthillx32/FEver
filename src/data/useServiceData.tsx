@@ -12,72 +12,72 @@ const useServicesData = (): Services[] => {
       tags: ["Formentechnik"],
       subServices: [
         {
-          title: "Beratung",
-          paragraph: "lorem ipsum dolor sit amet",
+          title: t("formen.subServices.0.title"),
+          paragraph: t("formen.subServices.0.paragraph"),
           path: "/beratung",
           image: [""],
         },
         {
-          title: "Werkzeug",
-          paragraph: "lorem ipsum dolor sit amet",
+          title: t("formen.subServices.1.title"),
+          paragraph: t("formen.subServices.1.paragraph"),
           path: "/werk",
           image: [""],
         },
         {
-          title: "Abmusterung",
-          paragraph: "lorem ipsum dolor sit amet",
+          title: t("formen.subServices.2.title"),
+          paragraph: t("formen.subServices.2.paragraph"),
           path: "/abmus",
           image: [""],
         },
       ],
     },
     {
-      title: "Aufwertung",
-      paragraph: "lorem ipsum dolor sit amet",
+      title: t("auf.title"),
+      paragraph: t("auf.paragraph"),
       image: "/images/blog/blog-02.jpg",
       tags: ["Aufwertung"],
       subServices: [
         {
-          title: "Hochglanz",
-          paragraph: "lorem ipsum dolor sit amet",
+          title: t("auf.subServices.0.title"),
+          paragraph: t("auf.subServices.0.paragraph"),
           path: "/hoch",
           image: [""],
         },
         {
-          title: "Lasergravieren",
-          paragraph: "lorem ipsum dolor sit amet",
+          title: t("auf.subServices.1.title"),
+          paragraph: t("auf.subServices.1.paragraph"),
           path: "/laser",
           image: [""],
         },
         {
-          title: "Auftrag",
-          paragraph: "lorem ipsum dolor sit amet",
+          title: t("auf.subServices.2.title"),
+          paragraph: t("auf.subServices.2.paragraph"),
           path: "/auf",
           image: [""],
         },
       ],
     },
     {
-      title: "Fertig",
-      paragraph: "lorem ipsum dolor sit amet",
+      title: t("fert.title"),
+      paragraph: t("fert.paragraph"),
       image: "/images/blog/blog-03.jpg",
       tags: ["Fertig"],
       subServices: [
         {
-          title: "Frasen",
-          paragraph: "",
+          title: t("fert.subServices.0.title"),
+          paragraph: t("fert.subServices.0.paragraph"),
           path: "/fra",
           image: [""],
         },
         {
-          title: "Drehen",
-          paragraph: "",
+          title: t("fert.subServices.1.title"),
+          paragraph: t("fert.subServices.1.paragraph"),
           path: "/dreh",
           image: [""],
         },
         {
-          title: "Erodieren",
-          paragraph: "",
+          title: t("fert.subServices.2.title"),
+          paragraph: t("fert.subServices.2.paragraph"),
           path: "/erod",
           image: [""],
         },
@@ -87,5 +87,3 @@ const useServicesData = (): Services[] => {
 };
 
 export default useServicesData;
-
-
