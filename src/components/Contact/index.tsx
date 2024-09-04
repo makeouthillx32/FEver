@@ -16,11 +16,11 @@ const Contact = async () => {
             <Map center={[49.707556892870045, 8.84701398118458]} zoom={16} />
           </div>
 
-          <div className="w-full px-4 pb-4 lg:w-5/12 xl:w-4/12">
+          <div className="w-full px-4 pb-4 lg:w-5/12">
             <ContactCard />
           </div>
 
-          <div className="w-full px-4 pb-4 lg:w-6/12 xl:w-6/12">
+          <div className="w-full px-4 pb-4 lg:w-7/12 ">
             <div
               className="mb-12 rounded-sm bg-white px-8 py-11 shadow-two dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s

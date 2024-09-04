@@ -56,7 +56,7 @@ export default {
     opendays: "Montag - Freitag: 7:00 - 16:00 Uhr",
     form: {
       title: "Kontakt Form",
-      paragraph : "Wir werden Sie so schnell wie möglich beantworten",
+      paragraph: "Wir werden Sie so schnell wie möglich beantworten",
       textarea: "Geben Sie Ihre Nachricht hier ein",
       submit: "Senden",
     },
@@ -66,6 +66,6 @@ export default {
     title: "Über Uns",
     paragraph: "Formen Werkstatt, wo Innovation auf Präzision trifft.",
     description:
-      "Im Herzen von Reichelsheim, Odenwald, sind wir darauf spezialisiert, Ihre Ideen in greifbare Ergebnisse zu verwandeln. Unser voll ausgestattetes Werk ermöglicht es uns, ein umfassendes Dienstleistungsangebot von der Formenherstellung bis hin zur hochpräzisen Maschinenbearbeitung anzubieten. Mit jahrelanger Erfahrung in der Branche zeichnet sich unser Team durch die Herstellung hochwertiger Formen für Kunststoff, Gummi und andere Materialien aus. Wir sind auf komplexe Werkzeugkonstruktionen, präzise Fertigung und detaillierte Veredelungsservices spezialisiert. Egal, ob Sie ein erfahrenes Industrieunternehmen oder ein aufstrebendes Startup sind, wir bieten maßgeschneiderte Lösungen, um Ihre spezifischen Anforderungen zu erfüllen. Bei Formen Werkstatt legen wir großen Wert auf Exzellenz und verwenden modernste Technologie und Materialien, um überlegene Produkte zu liefern. Wir begleiten Sie durch jede Phase des Prozesses und sorgen dafür, dass Ihr Projekt sein volles Potenzial erreicht. Vielen Dank, dass Sie uns für Ihre Formen- und Maschinenbearbeitungsbedürfnisse in Betracht ziehen. Wir freuen uns darauf, mit Ihnen zusammenzuarbeiten und Ihre Vision Wirklichkeit werden zu lassen.",
+      "Im Herzen von Reichelsheim, Odenwald, sind wir darauf spezialisiert, Ihre Ideen in greifbare Ergebnisse zu verwandeln. Unser voll ausgestattetes Werk ermöglicht es uns, ein umfassendes Dienstleistungsangebot von der Formenherstellung bis hin zur hochpräzisen Maschinenbearbeitung anzubieten. ",
   },
 } as const;
