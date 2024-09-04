@@ -10,7 +10,7 @@ const ContactCard = () => {
   const t = useScopedI18n("contact");
 
   return (
-    <div className="relative z-10 rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark dark:shadow-none">
+    <div className="relative z-10 rounded-sm bg-white p-8 shadow-two dark:bg-gray-dark dark:shadow-none">
       <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
         Formen Werkstatt
       </h3>
@@ -150,7 +150,7 @@ const ContactCard = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g opacity="0.3">
+            <g opacity="0.7">
               <path
                 opacity="0.45"
                 d="M1 89.9999C8 77.3332 27.7 50.7999 50.5 45.9999C79 39.9999 95 41.9999 106 30.4999C117 18.9999 126 -3.50014 149 -3.50014C172 -3.50014 187 4.99986 200.5 -8.50014C214 -22.0001 210.5 -46.0001 244 -37.5001C270.8 -30.7001 307.167 -45 322 -53"
@@ -254,4 +254,3 @@ const ContactCard = () => {
 };
 
 export default ContactCard;
-

@@ -15,15 +15,14 @@ const customIcon = new L.Icon({
 interface MapProps {
   center: [number, number];
   zoom: number;
-  height: number;
 }
 
-const Map: React.FC<MapProps> = ({ center, zoom, height }) => {
+const Map: React.FC<MapProps> = ({ center, zoom }) => {
   return (
     <MapContainer
       center={center}
       zoom={zoom}
-      style={{ height: `${height}px`, width: "100%" }}
+      style={{ height: "50dvh", width: "100%", zIndex: 10 }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

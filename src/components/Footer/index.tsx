@@ -22,12 +22,12 @@ const Footer = () => {
           </div>
 
           {/* Services Section */}
-          <div className="w-full px-4 lg:w-5/12 lg:flex-grow xl:w-6/12">
+          <div className="w-full px-4 lg:w-5/12 xl:w-6/12">
             <div className="mb-10 lg:mb-0">
               <h2 className="mb-6 text-xl font-bold text-black dark:text-white">
                 Services
               </h2>
-              <div className="-mx-2 flex ">
+              <div className="-mx-2 flex flex-wrap">
                 {servicesData?.map((service) => (
                   <div
                     key={service.title}

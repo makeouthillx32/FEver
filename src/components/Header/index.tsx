@@ -14,7 +14,6 @@ const Header = () => {
   const serviceData = useServiceData();
 
   const locale = useCurrentLocale();
-  console.log("🚀  locale:", locale);
 
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -51,7 +50,7 @@ const Header = () => {
 
   return (
     <header
-      className={`header left-0 top-0 z-40 flex w-full items-center ${
+      className={`header left-0 top-0 z-40 flex w-full items-center  ${
         sticky
           ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
           : "absolute bg-transparent"
@@ -95,11 +94,15 @@ const Header = () => {
               </button>
               <nav
                 id="navbarCollapse"
-                className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
-                  navbarOpen
-                    ? "visibility top-full opacity-100"
-                    : "invisible top-[120%] opacity-0"
-                }`}
+                className={cn(
+                  `navbar absolute right-0  w-full rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300`,
+                  `dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100`,
+                  `${
+                    navbarOpen
+                      ? "visibility top-full  opacity-100"
+                      : "invisible top-[120%] opacity-0"
+                  }`,
+                )}
               >
                 <ul className="block lg:flex lg:space-x-12">
                   {menuData.map((menuItem, index) => (
@@ -134,13 +137,23 @@ const Header = () => {
                             </span>
                           </p>
                           <div
-                            className={`submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
-                              openIndex === index ? "block" : "hidden"
-                            }`}
+                            className={cn(
+                              `submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark`,
+                              `lg:invisible lg:absolute lg:top-[110%] lg:rounded-lg lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full`,
+                              // ` lg:flex lg:gap-24 lg:p-4`,
+                              `${openIndex === index ? "block" : "hidden"}`,
+                            )}
                           >
                             {serviceData.map((serviceItem) => (
-                              <div key={serviceItem.title}>
-                                <p className="block rounded py-2.5 text-xl text-dark  dark:text-white/70  lg:px-3">
+                              <div
+                                key={serviceItem.title}
+                                className="lg:text-nowrap lg:p-4  "
+                              >
+                                <p
+                                  className={cn(
+                                    "rounded py-2.5 text-xl text-dark dark:text-white/70 ",
+                                  )}
+                                >
                                   {serviceItem.title}
                                 </p>
 
@@ -149,7 +162,7 @@ const Header = () => {
                                     <Link
                                       key={subServiceItem.title}
                                       href={`/services/${subServiceItem.path}`}
-                                      className="block rounded py-2 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-6"
+                                      className="block rounded py-2 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-2"
                                     >
                                       {subServiceItem.title}
                                     </Link>
@@ -170,10 +183,10 @@ const Header = () => {
               <div className="flex items-center space-x-2 rounded border border-gray-300 bg-gray-100 p-1 dark:border-gray-600 dark:bg-gray-800">
                 <button
                   className={cn(
-                    "px-4 py-2 text-sm font-medium rounded-sm",
+                    "rounded-sm px-4 py-2 text-sm font-medium",
                     locale === "en"
                       ? "bg-primary text-white"
-                      : "text-dark hover:bg-opacity-90 dark:text-white"
+                      : "text-dark hover:bg-opacity-90 dark:text-white",
                   )}
                   onClick={() => changeLocale("en")}
                 >
@@ -181,10 +194,10 @@ const Header = () => {
                 </button>
                 <button
                   className={cn(
-                    "px-4 py-2 text-sm font-medium rounded-sm",
+                    "rounded-sm px-4 py-2 text-sm font-medium",
                     locale === "de"
                       ? "bg-primary text-white"
-                      : "text-dark hover:bg-opacity-90 dark:text-white"
+                      : "text-dark hover:bg-opacity-90 dark:text-white",
                   )}
                   onClick={() => changeLocale("de")}
                 >

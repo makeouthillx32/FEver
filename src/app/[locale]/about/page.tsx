@@ -1,9 +1,8 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
-
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 
 import { Metadata } from "next";
-
 import { getScopedI18n } from "@/locales/server";
 
 export const metadata: Metadata = {
@@ -19,6 +18,7 @@ const AboutPage = async () => {
     <>
       <Breadcrumb pageName={t("title")} description={t("paragraph")} />
       <AboutSectionOne />
+      <AboutSectionTwo />
     </>
   );
 };
