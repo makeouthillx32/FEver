@@ -34,7 +34,7 @@ const useServicesData = (): Services[] => {
     {
       title: t("auf.title"),
       paragraph: t("auf.paragraph"),
-      image: "/images/enhance.webp",
+      image: "/images/sparks.webp",
       tags: ["Aufwertung"],
       subServices: [
         {
