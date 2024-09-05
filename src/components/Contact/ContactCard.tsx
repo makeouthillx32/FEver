@@ -10,7 +10,7 @@ const ContactCard = () => {
   const t = useScopedI18n("contact");
 
   return (
-    <div className="relative z-10 rounded-sm bg-white p-8 shadow-two dark:bg-gray-dark dark:shadow-none">
+    <div className="relative h-full z-10 rounded-sm bg-white p-8 shadow-two dark:bg-gray-dark dark:shadow-none">
       <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
         Formen Werkstatt
       </h3>

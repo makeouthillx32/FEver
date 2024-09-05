@@ -4,25 +4,34 @@ import dynamic from "next/dynamic";
 const Map = dynamic(() => import("./Map"), { ssr: false });
 
 import { getScopedI18n } from "@/locales/server";
+import { cn } from "@/utils/cn";
 
 const Contact = async () => {
   const t = await getScopedI18n("contact");
 
   return (
-    <section id="contact" className="overflow-hidden pb-16  md:pb-20 lg:pb-24">
+    <section id="contact" className="overflow-hidden py-16 md:pb-20 lg:pb-24">
       <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 pb-4 ">
-            <Map center={[49.707556892870045, 8.84701398118458]} zoom={16} />
-          </div>
-
-          <div className="w-full px-4 pb-4 lg:w-5/12">
+        <div
+          className={cn(
+            "-mx-4 flex flex-wrap",
+            "lg:grid lg:grid-cols-12 lg:grid-rows-2",
+          )}
+        >
+          <div className={cn("col-span-5 row-span-2 w-full px-4 pb-4")}>
             <ContactCard />
           </div>
 
-          <div className="w-full px-4 pb-4 lg:w-7/12 ">
+          <div className={cn("col-span-7 w-full px-4 pb-4 ")}>
+            <Map center={[49.707556892870045, 8.84701398118458]} zoom={16} />
+          </div>
+
+          <div className={cn("col-span-7 h-full w-full px-4 pb-4 ")}>
             <div
-              className="mb-12 rounded-sm bg-white px-8 py-11 shadow-two dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+              className={cn(
+                " rounded-sm bg-white px-8 py-11 shadow-two dark:bg-gray-dark ",
+                // " sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]",
+              )}
               data-wow-delay=".15s
               "
             >

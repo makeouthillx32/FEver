@@ -9,6 +9,7 @@ const Footer = () => {
     <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
       <div className="container mx-auto px-4">
         <div className="-mx-4 flex flex-wrap">
+        
           {/* Logo and Address Section */}
           <div className="mb-10 w-full px-4 lg:w-4/12 xl:w-3/12">
             <div className="mb-10 max-w-[360px]">
@@ -66,15 +67,7 @@ const Footer = () => {
                     href="/contact"
                     className="text-base text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
-                    Open Support Ticket
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
-                    className="text-base text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    Terms of Use
+                    Contact
                   </Link>
                 </li>
                 <li>
@@ -83,6 +76,22 @@ const Footer = () => {
                     className="text-base text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                   >
                     About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/privacy"
+                    className="text-base text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  >
+                    Privacy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/impressum"
+                    className="text-base text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                  >
+                    Impressum
                   </Link>
                 </li>
               </ul>
