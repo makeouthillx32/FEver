@@ -1,20 +1,18 @@
 "use client";
-
+import { useScopedI18n } from "@/locales/client";
 import { useTheme } from "next-themes";
 
-import { useScopedI18n } from "@/locales/client";
-
-const ContactCard = () => {
+export default function ContactCard() {
   const { theme } = useTheme();
 
   const t = useScopedI18n("contact");
 
   return (
-    <div className="relative h-full z-10 rounded-sm bg-white p-8 shadow-two dark:bg-gray-dark dark:shadow-none">
-      <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
+    <div className="relative z-10 h-full rounded-sm bg-white p-8 shadow-two dark:bg-gray-dark dark:shadow-none">
+      <h3 className="mb-4 text-2xl font-bold text-black dark:text-white">
         Formen Werkstatt
       </h3>
-      <p className="mb-8 border-b border-body-color border-opacity-25 pb-8 text-base text-body-color dark:border-white dark:border-opacity-25">
+      <p className="mb-8 border-b border-body-color border-opacity-25 pb-8 text-lg text-body-color dark:border-white dark:border-opacity-25">
         Sudetenstraße 105 <br /> 64385 Reichelsheim
       </p>
       <div className="mb-6">
@@ -251,6 +249,4 @@ const ContactCard = () => {
       </div>
     </div>
   );
-};
-
-export default ContactCard;
+}

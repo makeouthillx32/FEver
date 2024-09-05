@@ -6,7 +6,7 @@ const Map = dynamic(() => import("./Map"), { ssr: false });
 import { getScopedI18n } from "@/locales/server";
 import { cn } from "@/utils/cn";
 
-const Contact = async () => {
+export default async function Contact() {
   const t = await getScopedI18n("contact");
 
   return (
@@ -35,9 +35,9 @@ const Contact = async () => {
               data-wow-delay=".15s
               "
             >
-              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+              <h3 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 {t("form.title")}
-              </h2>
+              </h3>
               <p className="mb-12 text-base font-medium text-body-color">
                 {t("form.paragraph")}
               </p>
@@ -102,6 +102,4 @@ const Contact = async () => {
       </div>
     </section>
   );
-};
-
-export default Contact;
+}

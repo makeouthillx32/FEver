@@ -16,7 +16,11 @@ const Services = () => {
       className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28"
     >
       <div className="container">
-        <SectionTitle title={t("title")} paragraph="" />
+        <SectionTitle
+          title={t("title")}
+          paragraph={t("paragraph")}
+          width={"full"}
+        />
       </div>
       <div className={cn("flex flex-col gap-4 ")}>
         {servicesData.map((service) => (

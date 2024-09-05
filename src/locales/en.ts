@@ -52,7 +52,7 @@ export default {
     paragraph:
       "We'd love to hear from you! Whether you have a question, need a quote, or want to discuss a new project, feel free to reach out to us.",
     phone: "Phone",
-    hours: "Opening Hours",
+    hours: "Open Hours",
     opendays: "Monday - Friday: 7:00 - 16:00",
     form: {
       title: "Contact Form",
