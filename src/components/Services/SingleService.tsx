@@ -18,13 +18,15 @@ const SingleService = ({ service }: { service: Services }) => {
           <div className="absolute p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
             <h3
               className={cn(
-                "mb-4 block pb-4 text-6xl font-bold text-white ",
+                "mb-4 block pb-4 text-4xl font-bold text-white lg:text-6xl ",
                 "border-b border-body-color ",
               )}
             >
               {title}
             </h3>
-            <p className="mb-6 text-2xl font-medium text-white">{paragraph}</p>
+            <p className="mb-6 text-xl font-medium text-white lg:text-2xl">
+              {paragraph}
+            </p>
           </div>
         </div>
       </div>
