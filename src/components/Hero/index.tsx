@@ -8,7 +8,7 @@ const Hero = async () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden bg-white pb-24 pt-[140px] dark:bg-gray-dark md:pb-[150px] md:pt-[180px] xl:pb-[200px] xl:pt-[220px] 2xl:pb-[250px] 2xl:pt-[250px]"
       >
         <video
           autoPlay
