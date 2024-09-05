@@ -60,6 +60,7 @@ const Header = () => {
         <div className="relative -mx-4 flex items-center justify-between">
           <div className="w-60 max-w-full px-4 xl:mr-12">
             <Link
+              onClick={() => setNavbarOpen(false)}
               href="/"
               className={`header-logo block w-full ${
                 sticky ? "py-5 lg:py-2" : "py-8"
@@ -109,8 +110,9 @@ const Header = () => {
                     <li key={index} className="group relative">
                       {menuItem.path ? (
                         <Link
+                          onClick={() => setNavbarOpen(false)}
                           href={menuItem.path}
-                          className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                          className={`flex py-2 text-xl lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                             usePathName === menuItem.path
                               ? "text-primary dark:text-white"
                               : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
@@ -122,7 +124,7 @@ const Header = () => {
                         <>
                           <p
                             onClick={() => handleSubmenu(index)}
-                            className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                            className="flex cursor-pointer items-center justify-between py-2 text-xl text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                           >
                             {menuItem.title}
                             <span className="pl-3">
@@ -138,9 +140,9 @@ const Header = () => {
                           </p>
                           <div
                             className={cn(
-                              `submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark`,
+                              `submenu relative left-4 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark`,
                               `lg:invisible lg:absolute lg:top-[110%] lg:rounded-lg lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full`,
-                              `  lg:p-4 lg:mr-6`,
+                              `  lg:mr-6 lg:p-4`,
                               `${openIndex === index ? "block" : "hidden"}`,
                             )}
                           >
@@ -151,7 +153,7 @@ const Header = () => {
                               >
                                 <p
                                   className={cn(
-                                    "rounded py-2.5 text-xl text-dark dark:text-white/70 ",
+                                    "rounded py-2.5 text-lg text-dark dark:text-white/70 ",
                                   )}
                                 >
                                   {serviceItem.title}
@@ -160,9 +162,10 @@ const Header = () => {
                                 {serviceItem.subServices.map(
                                   (subServiceItem) => (
                                     <Link
+                                      onClick={() => setNavbarOpen(false)}
                                       key={subServiceItem.title}
                                       href={`/services${subServiceItem.path}`}
-                                      className="block rounded py-2 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-2"
+                                      className="block rounded px-2 py-2 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                                     >
                                       {subServiceItem.title}
                                     </Link>
@@ -188,7 +191,10 @@ const Header = () => {
                       ? "bg-primary text-white"
                       : "text-dark hover:bg-opacity-90 dark:text-white",
                   )}
-                  onClick={() => changeLocale("en")}
+                  onClick={() => {
+                    changeLocale("en");
+                    setNavbarOpen(false);
+                  }}
                 >
                   EN
                 </button>
@@ -199,7 +205,10 @@ const Header = () => {
                       ? "bg-primary text-white"
                       : "text-dark hover:bg-opacity-90 dark:text-white",
                   )}
-                  onClick={() => changeLocale("de")}
+                  onClick={() => {
+                    changeLocale("de");
+                    setNavbarOpen(false);
+                  }}
                 >
                   DE
                 </button>
