@@ -140,14 +140,14 @@ const Header = () => {
                             className={cn(
                               `submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark`,
                               `lg:invisible lg:absolute lg:top-[110%] lg:rounded-lg lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full`,
-                              // ` lg:flex lg:gap-24 lg:p-4`,
+                              `  lg:p-4 lg:mr-6`,
                               `${openIndex === index ? "block" : "hidden"}`,
                             )}
                           >
                             {serviceData.map((serviceItem) => (
                               <div
                                 key={serviceItem.title}
-                                className="lg:text-nowrap lg:p-4  "
+                                className="lg:text-nowrap lg:px-4 lg:py-2 "
                               >
                                 <p
                                   className={cn(
@@ -161,7 +161,7 @@ const Header = () => {
                                   (subServiceItem) => (
                                     <Link
                                       key={subServiceItem.title}
-                                      href={`/services/${subServiceItem.path}`}
+                                      href={`/services${subServiceItem.path}`}
                                       className="block rounded py-2 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-2"
                                     >
                                       {subServiceItem.title}

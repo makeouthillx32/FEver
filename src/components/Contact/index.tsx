@@ -9,7 +9,7 @@ const Contact = async () => {
   const t = await getScopedI18n("contact");
 
   return (
-    <section id="contact" className="overflow-hidden py-16  md:py-20 lg:py-24">
+    <section id="contact" className="overflow-hidden pb-16  md:pb-20 lg:pb-24">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 pb-4 ">

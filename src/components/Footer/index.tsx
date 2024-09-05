@@ -40,7 +40,7 @@ const Footer = () => {
                       {service.subServices.map((subService) => (
                         <li key={subService.title}>
                           <Link
-                            href={`/services/${subService.path}`}
+                            href={`/services${subService.path}`}
                             className="text-base text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                           >
                             {subService.title}
