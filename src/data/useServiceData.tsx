@@ -8,7 +8,7 @@ const useServicesData = (): Services[] => {
     {
       title: t("formen.title"),
       paragraph: t("formen.paragraph"),
-      image: "/images/blog/blog-01.jpg",
+      image: "/images/mold-close.webp",
       tags: ["Formentechnik"],
       subServices: [
         {

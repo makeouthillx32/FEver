@@ -1,10 +1,12 @@
 import { Brand } from "@/types";
 import Image from "next/image";
 import brandsData from "./brandsData";
+import SectionTitle from "../Common/SectionTitle";
 
 const Brands = () => {
   return (
-    <section className="pt-16">
+    <section className="mb-16 pt-16">
+      <SectionTitle title="Partners" paragraph="" center />
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
