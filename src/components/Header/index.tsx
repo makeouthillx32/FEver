@@ -19,15 +19,10 @@ const Header = () => {
 
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
-  const [openIndex, setOpenIndex] = useState(-1);
+  const [openIndex, setOpenIndex] = useState(1);
   const navbarRef: RefObject<HTMLDivElement> = useRef(null);
 
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  const navbarToggleHandler = (event: MouseEvent<HTMLButtonElement>) => {
-    event.stopPropagation();
-    setNavbarOpen((prev) => !prev);
-  };
 
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
@@ -44,34 +39,22 @@ const Header = () => {
     }
   };
 
-  useEffect(() => {
-    if (navbarOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [navbarOpen]);
+  // useEffect(() => {
+  //   if (navbarOpen) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  // }, [navbarOpen]);
 
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleStickyNavbar);
 
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        navbarRef.current &&
-        !navbarRef.current.contains(event.target as Node)
-      ) {
-        setNavbarOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside as any);
-
     return () => {
       window.removeEventListener("scroll", handleStickyNavbar);
       window.removeEventListener("resize", handleResize);
-      document.removeEventListener("mousedown", handleClickOutside as any);
     };
   }, []);
 
@@ -107,7 +90,9 @@ const Header = () => {
           <div className="flex w-full items-center justify-between px-4">
             <div>
               <button
-                onClick={navbarToggleHandler}
+                onClick={() => {
+                  setNavbarOpen(!navbarOpen);
+                }}
                 id="navbarToggler"
                 aria-label="Mobile Menu"
                 className="absolute right-4 top-1/2 z-50 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
@@ -136,12 +121,12 @@ const Header = () => {
                   `dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100`,
                   `${
                     navbarOpen && isSmallScreen
-                      ? "visibility top-full opacity-100"
+                      ? "visibility top-[70%] w-full opacity-100"
                       : "invisible top-[120%] opacity-0"
                   }`,
                   `${
                     isSmallScreen
-                      ? "max-h-[calc(100vh-100px)] overflow-y-auto"
+                      ? "max-h-[calc(100vh-120px)] overflow-y-auto"
                       : "overflow-visible"
                   }`,
                 )}

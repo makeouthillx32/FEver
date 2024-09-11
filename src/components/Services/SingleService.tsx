@@ -48,7 +48,7 @@ const SingleService = ({ service }: { service: Services }) => {
           {subServices.map((subService) => (
             <Link
               key={subService.title}
-              href={`services${subService.path}`}
+              href={`/services${subService.path}`}
               className={cn(
                 "flex w-full items-center gap-8",
                 "md:text-3xl ",
