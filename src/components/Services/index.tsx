@@ -30,7 +30,7 @@ const Services = () => {
         ))}
       </div>
 
-      {/* <div className="absolute left-0 top-0 z-[-1] opacity-30 lg:opacity-100 scale-[-1]">
+      <div className="absolute left-0 top-0 z-[-1] opacity-30 lg:opacity-100 scale-[-1]">
         <svg
           width="364"
           height="201"
@@ -132,7 +132,7 @@ const Services = () => {
             </radialGradient>
           </defs>
         </svg>
-      </div> */}
+      </div>
       <div className="absolute bottom-0 right-0 z-[-1] opacity-30 lg:opacity-100">
         <svg
           width="364"

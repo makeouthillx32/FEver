@@ -18,7 +18,7 @@ export default {
   services: {
     formen: {
       title: "Formenbau",
-      paragraph: "Wir bauen deine Formen mit den richtigen Werkzeugen",
+      paragraph: "Wir bauen Ihre Formen mit den richtigen Werkzeugen",
       subServices: [
         { title: "Beratung & Konstruktion", paragraph: "" },
         { title: "Werkzeugherstellung", paragraph: "" },

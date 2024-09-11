@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, MouseEvent, RefObject } from "react";
 import ThemeToggler from "./ThemeToggler";
 import { useChangeLocale, useCurrentLocale } from "@/locales/client";
 import useMenuData from "@/data/useMenuData";
@@ -14,15 +14,21 @@ const Header = () => {
   const serviceData = useServiceData();
 
   const locale = useCurrentLocale();
+  const usePathName = usePathname();
+  const changeLocale = useChangeLocale();
 
-  // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const navbarToggleHandler = () => {
-    setNavbarOpen(!navbarOpen);
+  const [sticky, setSticky] = useState(false);
+  const [openIndex, setOpenIndex] = useState(-1);
+  const navbarRef: RefObject<HTMLDivElement> = useRef(null);
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  const navbarToggleHandler = (event: MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    setNavbarOpen((prev) => !prev);
   };
 
-  // Sticky Navbar
-  const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
       setSticky(true);
@@ -30,12 +36,44 @@ const Header = () => {
       setSticky(false);
     }
   };
-  useEffect(() => {
-    window.addEventListener("scroll", handleStickyNavbar);
-  });
 
-  // submenu handler
-  const [openIndex, setOpenIndex] = useState(-1);
+  const handleResize = () => {
+    setIsSmallScreen(window.innerWidth < 1024);
+    if (window.innerWidth >= 1024) {
+      setNavbarOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (navbarOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [navbarOpen]);
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleStickyNavbar);
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node)
+      ) {
+        setNavbarOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside as any);
+
+    return () => {
+      window.removeEventListener("scroll", handleStickyNavbar);
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("mousedown", handleClickOutside as any);
+    };
+  }, []);
 
   const handleSubmenu = (index: number) => {
     if (openIndex === index) {
@@ -45,12 +83,9 @@ const Header = () => {
     }
   };
 
-  const usePathName = usePathname();
-  const changeLocale = useChangeLocale();
-
   return (
     <header
-      className={`header left-0 top-0 z-40 flex w-full items-center  ${
+      className={`header left-0 top-0 z-40 flex w-full items-center ${
         sticky
           ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
           : "absolute bg-transparent"
@@ -64,7 +99,7 @@ const Header = () => {
               href="/"
               className={`header-logo block w-full ${
                 sticky ? "py-5 lg:py-2" : "py-8"
-              } `}
+              }`}
             >
               <Image src="/logo.svg" alt="logo" width={150} height={100} />
             </Link>
@@ -75,33 +110,39 @@ const Header = () => {
                 onClick={navbarToggleHandler}
                 id="navbarToggler"
                 aria-label="Mobile Menu"
-                className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                className="absolute right-4 top-1/2 z-50 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
               >
                 <span
                   className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? " top-[7px] rotate-45" : " "
+                    navbarOpen ? " top-[7px] rotate-45" : ""
                   }`}
                 />
                 <span
                   className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? "opacity-0 " : " "
+                    navbarOpen ? "opacity-0" : ""
                   }`}
                 />
                 <span
                   className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? " top-[-8px] -rotate-45" : " "
+                    navbarOpen ? " top-[-8px] -rotate-45" : ""
                   }`}
                 />
               </button>
               <nav
+                ref={navbarRef}
                 id="navbarCollapse"
                 className={cn(
-                  `navbar absolute right-0  w-full rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300`,
+                  `navbar absolute right-0  rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300`,
                   `dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100`,
                   `${
-                    navbarOpen
-                      ? "visibility top-full  opacity-100"
+                    navbarOpen && isSmallScreen
+                      ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
+                  }`,
+                  `${
+                    isSmallScreen
+                      ? "max-h-[calc(100vh-100px)] overflow-y-auto"
+                      : "overflow-visible"
                   }`,
                 )}
               >
@@ -153,23 +194,34 @@ const Header = () => {
                               >
                                 <p
                                   className={cn(
-                                    "rounded py-2.5 text-lg text-dark dark:text-white/70 ",
+                                    "cursor-default rounded py-2.5 text-xl font-medium text-dark transition dark:text-white ",
                                   )}
                                 >
                                   {serviceItem.title}
                                 </p>
-
                                 {serviceItem.subServices.map(
-                                  (subServiceItem) => (
-                                    <Link
-                                      onClick={() => setNavbarOpen(false)}
-                                      key={subServiceItem.title}
-                                      href={`/services${subServiceItem.path}`}
-                                      className="block rounded px-2 py-2 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
-                                    >
-                                      {subServiceItem.title}
-                                    </Link>
-                                  ),
+                                  (subService, subIndex) =>
+                                    subService.path ? (
+                                      <Link
+                                        onClick={() => setNavbarOpen(false)}
+                                        href={`services${subService.path}`}
+                                        key={subIndex}
+                                        className={cn(
+                                          "block px-4 py-1.5 text-sm font-medium text-dark transition hover:bg-primary hover:bg-opacity-10 dark:text-white",
+                                        )}
+                                      >
+                                        {subService.title}
+                                      </Link>
+                                    ) : (
+                                      <span
+                                        key={subIndex}
+                                        className={cn(
+                                          "block px-4 py-1.5 text-sm font-medium text-dark transition hover:bg-primary hover:bg-opacity-10 dark:text-white",
+                                        )}
+                                      >
+                                        {subService.title}
+                                      </span>
+                                    ),
                                 )}
                               </div>
                             ))}
@@ -178,11 +230,49 @@ const Header = () => {
                       )}
                     </li>
                   ))}
+
+                  {/* Language Selector inside navbar for small screens */}
+                  <li className="block lg:hidden">
+                    <div className="mt-4 flex items-center justify-between space-x-2 rounded border border-gray-300 bg-gray-100 p-1 dark:border-gray-600 dark:bg-gray-800">
+                      <div className="flex space-x-2">
+                        <button
+                          className={cn(
+                            "rounded-sm px-4 py-2 text-sm font-medium",
+                            locale === "en"
+                              ? "bg-primary text-white"
+                              : "text-dark hover:bg-opacity-90 dark:text-white",
+                          )}
+                          onClick={() => {
+                            changeLocale("en");
+                            setNavbarOpen(false);
+                          }}
+                        >
+                          EN
+                        </button>
+                        <button
+                          className={cn(
+                            "rounded-sm px-4 py-2 text-sm font-medium",
+                            locale === "de"
+                              ? "bg-primary text-white"
+                              : "text-dark hover:bg-opacity-90 dark:text-white",
+                          )}
+                          onClick={() => {
+                            changeLocale("de");
+                            setNavbarOpen(false);
+                          }}
+                        >
+                          DE
+                        </button>
+                      </div>
+
+                      <ThemeToggler />
+                    </div>
+                  </li>
                 </ul>
               </nav>
             </div>
-            <div className="flex items-center justify-end pr-16 lg:pr-0">
-              {/* Language Selector */}
+
+            <div className="hidden items-center justify-end pr-16 lg:flex lg:pr-0">
               <div className="flex items-center space-x-2 rounded border border-gray-300 bg-gray-100 p-1 dark:border-gray-600 dark:bg-gray-800">
                 <button
                   className={cn(
