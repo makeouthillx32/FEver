@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState, useRef, MouseEvent, RefObject } from "react";
+import { useEffect, useState, useRef, RefObject } from "react";
 import ThemeToggler from "./ThemeToggler";
 import { useChangeLocale, useCurrentLocale } from "@/locales/client";
 import useMenuData from "@/data/useMenuData";
@@ -189,7 +189,7 @@ const Header = () => {
                                     subService.path ? (
                                       <Link
                                         onClick={() => setNavbarOpen(false)}
-                                        href={`services${subService.path}`}
+                                        href={`/services${subService.path}`}
                                         key={subIndex}
                                         className={cn(
                                           "block px-4 py-1.5 text-sm font-medium text-dark transition hover:bg-primary hover:bg-opacity-10 dark:text-white",
