@@ -14,7 +14,7 @@ const Header = () => {
   const serviceData = useServiceData();
 
   const locale = useCurrentLocale();
-  const usePathName = usePathname();
+  const pathname = usePathname();
   const changeLocale = useChangeLocale();
 
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -139,7 +139,7 @@ const Header = () => {
                           onClick={() => setNavbarOpen(false)}
                           href={menuItem.path}
                           className={`flex py-2 text-xl lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
-                            usePathName === menuItem.path
+                            pathname === menuItem.path
                               ? "text-primary dark:text-white"
                               : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                           }`}
