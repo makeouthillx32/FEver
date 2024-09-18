@@ -9,7 +9,6 @@ const Footer = () => {
     <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
       <div className="container mx-auto px-4">
         <div className="-mx-4 flex flex-wrap">
-        
           {/* Logo and Address Section */}
           <div className="mb-10 w-full px-4 lg:w-4/12 xl:w-3/12">
             <div className="mb-10 max-w-[360px]">

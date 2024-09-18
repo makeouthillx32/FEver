@@ -1,6 +1,5 @@
 "use client";
 import SectionTitle from "../Common/SectionTitle";
-
 import useServicesData from "@/data/useServiceData";
 import { useScopedI18n } from "@/locales/client";
 import SingleService from "./SingleService";
@@ -30,7 +29,7 @@ const Services = () => {
         ))}
       </div>
 
-      <div className="absolute left-0 top-0 z-[-1] opacity-30 lg:opacity-100 scale-[-1]">
+      <div className="absolute left-0 top-0 z-[-1] scale-[-1] opacity-30 lg:opacity-100">
         <svg
           width="364"
           height="201"
