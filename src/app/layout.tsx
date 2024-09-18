@@ -7,9 +7,11 @@ import "@/styles/index.css";
 import "leaflet/dist/leaflet.css";
 import { ReactElement } from "react";
 import { Providers } from "./providers";
+import { getStaticParams } from "@/locales/server";
 
 const inter = Inter({ subsets: ["latin"] });
 const titillium = Titillium_Web({ subsets: ["latin"], weight: ["400", "700"] });
+
 
 export default function RootLayout({ children }: { children: ReactElement }) {
   return (
