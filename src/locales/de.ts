@@ -16,8 +16,8 @@ export default {
   },
 
   services: {
-    formen: {
-      title: "Formenbau",
+    formtechnik: {
+      title: "Formentechnik",
       paragraph: "Wir bauen Ihre Formen mit den richtigen Werkzeugen",
       subServices: [
         { title: "Beratung & Konstruktion", paragraph: "" },
@@ -26,25 +26,30 @@ export default {
       ],
     },
 
-    auf: {
-      title: "Aufwertung",
-      paragraph: "Aufwertung durch Gravur und Politur",
-      subServices: [
-        { title: "Hochglanzpolieren", paragraph: "" },
-        { title: "Lasergrevieren", paragraph: "" },
-        { title: "Auftragschweißen", paragraph: "" },
-      ],
-    },
-
-    fert: {
+    fertigung: {
       title: "Fertigung",
       paragraph: "Unsere Fertigung im Haus",
       subServices: [
         { title: "Fräsen", paragraph: "" },
         { title: "Drehen", paragraph: "" },
-        { title: "Erodieren", paragraph: "" },
+        { title: "Senkerodieren", paragraph: "" },
+        { title: "Drahterodieren", paragraph: "" },
+        { title: "Laserschweißen", paragraph: "" },
+        { title: "Lasergravieren", paragraph: "" },
+        { title: "Hochglanzpolieren", paragraph: "" },
+        { title: "Flachschleifen", paragraph: "" },
       ],
     },
+
+    formen:{
+      title:"Formen",
+      paragraph:"Reparatur Dienstleistungen",
+      subServices:[
+        { title: "Reparatur", paragraph: "" },
+        { title: "Überholung", paragraph: "" },
+        { title: "Abmessungskonstruktion", paragraph: "" },
+      ]
+    }
   },
 
   contact: {

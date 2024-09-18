@@ -4,7 +4,7 @@ import Gallery from "@/components/Common/Gallery";
 import RelatedPost from "@/components/Services/RelatedPost";
 import SharePost from "@/components/Services/SharePost";
 import TagButton from "@/components/Services/TagButton";
-import useServicesData from "@/data/ServiceData";
+import useServicesData from "@/data/useServiceData";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 

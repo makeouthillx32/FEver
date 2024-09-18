@@ -15,6 +15,11 @@ const useMenuData = (): Menu[] => {
       newTab: false,
     },
     {
+      title: "Jobs",
+      path: "/jobs",
+      newTab: false,
+    },
+    {
       title: t("contact"),
       path: "/contact",
       newTab: false,
