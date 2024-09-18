@@ -41,15 +41,15 @@ export default {
       ],
     },
 
-    formen:{
-      title:"Formen",
-      paragraph:"Reparatur Dienstleistungen",
-      subServices:[
-        { title: "Reparatur", paragraph: "" },
+    reparatur: {
+      title: "Reparatur",
+      paragraph: "Unsere Reparatur- und Wartungsdienste",
+      subServices: [
+        { title: "Renovierung", paragraph: "" },
         { title: "Überholung", paragraph: "" },
-        { title: "Abmessungskonstruktion", paragraph: "" },
-      ]
-    }
+        { title: "Formen Reparatur", paragraph: "" },
+      ],
+    },
   },
 
   contact: {
