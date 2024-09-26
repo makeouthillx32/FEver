@@ -51,15 +51,15 @@ export default function ServicePage() {
               <SubserviceContent subservice={subservice} />
             </div>
             <div className="w-full px-4 lg:w-4/12">
-              <div className="mb-10 rounded-sm bg-white shadow-three dark:bg-gray-dark dark:shadow-none">
+              <div className="mb-10 rounded-lg bg-white shadow-three dark:bg-gray-dark dark:shadow-none">
                 <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
                   Related Posts
                 </h3>
-                <ul className="p-8">
+                <ul className="p-4">
                   {relatedPosts.map((service, index) => (
                     <li
                       key={service.title + index}
-                      className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10"
+                      
                     >
                       <RelatedPost
                         title={service.title}
