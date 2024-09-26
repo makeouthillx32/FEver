@@ -15,7 +15,7 @@ const useServicesData = (): Services[] => {
           title: t("formtechnik.subServices.0.title"),
           description: t("formtechnik.subServices.0.description"),
           image: [""],
-          path: "/beratung",
+          path: "/beratung-und-design",
           paragraph: t("formtechnik.subServices.0.paragraph"),
           nestedList: [
             {
@@ -48,7 +48,7 @@ const useServicesData = (): Services[] => {
           title: t("formtechnik.subServices.1.title"),
           description: t("formtechnik.subServices.1.description"),
           image: [""],
-          path: "/werk",
+          path: "/werkzeugherstellung",
           paragraph: t("formtechnik.subServices.1.paragraph"),
           nestedList: [
             {
@@ -71,7 +71,7 @@ const useServicesData = (): Services[] => {
           title: t("formtechnik.subServices.2.title"),
           description: t("formtechnik.subServices.2.description"),
           image: [""],
-          path: "/abmusterung",
+          path: "/abmusterung-und-kleinserienfertigung",
           paragraph: t("formtechnik.subServices.2.paragraph"),
           nestedList: [
             {
@@ -101,7 +101,7 @@ const useServicesData = (): Services[] => {
           title: t("fertigung.subServices.0.title"),
           description: t("fertigung.subServices.0.description"),
           image: [""],
-          path: "/frasen",
+          path: "/fraesen",
           paragraph: t("fertigung.subServices.0.paragraph"),
           nestedList: [
             {
@@ -123,7 +123,7 @@ const useServicesData = (): Services[] => {
         },
         {
           title: t("fertigung.subServices.1.title"),
-          description: "",
+          description: t("fertigung.subServices.1.description"),
           image: [""],
           path: "/drehen",
           paragraph: t("fertigung.subServices.1.paragraph"),
@@ -147,7 +147,7 @@ const useServicesData = (): Services[] => {
         },
         {
           title: t("fertigung.subServices.2.title"),
-          description: "",
+          description: t("fertigung.subServices.2.description"),
           image: [""],
           path: "/senkerodieren",
           paragraph: t("fertigung.subServices.2.paragraph"),
@@ -165,7 +165,7 @@ const useServicesData = (): Services[] => {
         },
         {
           title: t("fertigung.subServices.3.title"),
-          description: "",
+          description: t("fertigung.subServices.3.description"),
           image: [""],
           path: "/drahterodieren",
           paragraph: t("fertigung.subServices.3.paragraph"),
@@ -217,7 +217,7 @@ const useServicesData = (): Services[] => {
         },
         {
           title: t("fertigung.subServices.6.title"),
-          description: "",
+          description: t("fertigung.subServices.6.description"),
           image: [""],
           path: "/hochglanzpolieren",
           paragraph: t("fertigung.subServices.6.paragraph"),
@@ -243,7 +243,7 @@ const useServicesData = (): Services[] => {
         },
         {
           title: t("fertigung.subServices.7.title"),
-          description: "",
+          description: t("fertigung.subServices.7.description"),
           image: [""],
           path: "/flachschleifen",
           paragraph: t("fertigung.subServices.7.paragraph"),
@@ -277,7 +277,7 @@ const useServicesData = (): Services[] => {
           title: t("reparatur.subServices.0.title"),
           description: t("reparatur.subServices.0.description"),
           image: [""],
-          path: "/beratung",
+          path: "/renovierung",
           paragraph: t("reparatur.subServices.0.paragraph"),
           nestedList: [
             {
@@ -294,7 +294,7 @@ const useServicesData = (): Services[] => {
           title: t("reparatur.subServices.1.title"),
           description: t("reparatur.subServices.1.description"),
           image: [""],
-          path: "/werk",
+          path: "/uberholung",
           paragraph: t("reparatur.subServices.1.paragraph"),
           nestedList: [
             {
@@ -310,9 +310,9 @@ const useServicesData = (): Services[] => {
         },
         {
           title: t("reparatur.subServices.2.title"),
-          description: "",
+          description: t("reparatur.subServices.2.description"),
           image: [""],
-          path: "/abmus",
+          path: "/formen-reparatur",
           paragraph: t("reparatur.subServices.2.paragraph"),
           nestedList: [
             {

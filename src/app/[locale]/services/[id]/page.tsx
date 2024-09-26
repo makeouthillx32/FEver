@@ -6,6 +6,7 @@ import SharePost from "@/components/Services/SharePost";
 import SubserviceContent from "@/components/Services/SubserviceContent";
 import TagButton from "@/components/Services/TagButton";
 import useServicesData from "@/data/useServiceData";
+import { subService } from "@/types";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -14,15 +15,7 @@ export default function ServicePage() {
   const router = useRouter();
   const serviceData = useServicesData();
 
-  const [relatedPosts, setRelatedPosts] = useState([
-    {
-      title: "",
-      paragraph: "",
-      description: "",
-      path: "",
-      image: [""],
-    },
-  ]);
+  const [relatedPosts, setRelatedPosts] = useState<subService[]>([]);
 
   const subserviceList = serviceData.flatMap((service) => service.subServices);
   const subservice = subserviceList.find(
@@ -63,15 +56,15 @@ export default function ServicePage() {
                   Related Posts
                 </h3>
                 <ul className="p-8">
-                  {relatedPosts.map((service) => (
+                  {relatedPosts.map((service, index) => (
                     <li
-                      key={service.title}
+                      key={service.title + index}
                       className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10"
                     >
                       <RelatedPost
                         title={service.title}
                         image="/images/blog/post-01.jpg"
-                        slug={`/services/${service.path}`}
+                        path={`/services/${service.path}`}
                         description={service.description}
                       />
                     </li>

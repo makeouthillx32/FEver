@@ -77,7 +77,7 @@ export default {
           cta: "Bereit loszulegen? Kontaktieren Sie uns noch heute für weitere Informationen zu unseren Werkzeugfertigungsdiensten!",
         },
         {
-          title: "Bemusterung & Kleinserienproduktion",
+          title: "Abmusterung & Kleinserienfertigung",
           description: "Wir hören bei der Werkzeugproduktion nicht auf",
           paragraph:
             "Sobald Ihr Werkzeug fertig ist, führen wir einen umfassenden Bemusterungsprozess durch, um seine Funktionalität sicherzustellen, gefolgt von Kleinserienproduktionsläufen. Unsere modernen Spritzgießmaschinen sind mit fortschrittlichen Robotersystemen für effiziente Teileentnahme und Übermoldingfähigkeiten ausgestattet.",

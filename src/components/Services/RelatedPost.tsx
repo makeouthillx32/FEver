@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const RelatedPost = ({
   image,
-  slug,
+  path,
   title,
   description,
 }: {
   image: string;
-  slug: string;
+  path: string;
   title: string;
   description: string;
 }) => {
@@ -22,7 +22,7 @@ const RelatedPost = ({
       <div className="w-full">
         <h5>
           <Link
-            href={slug}
+            href={path}
             className="mb-[6px] block text-base font-medium leading-snug text-black hover:text-primary dark:text-white dark:hover:text-primary"
           >
             {title}
