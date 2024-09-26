@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import useServicesData from "@/data/useServiceData";
+import { cn } from "@/utils/cn";
 
 const Footer = () => {
   const servicesData = useServicesData();
@@ -8,9 +9,15 @@ const Footer = () => {
   return (
     <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
       <div className="container mx-auto px-4">
-        <div className="-mx-4 flex flex-wrap">
+        <div
+          className={cn(
+            "",
+            "flex flex-wrap",
+            "xl:grid xl:grid-cols-[auto_auto_auto]",
+          )}
+        >
           {/* Logo and Address Section */}
-          <div className="mb-10 w-full px-4 lg:w-4/12 xl:w-3/12">
+          <div className="mb-10 w-full  ">
             <div className="mb-10 max-w-[360px]">
               <Link href="/" className="mb-6 inline-block">
                 <Image src="/logo.svg" alt="logo" width={200} height={100} />
@@ -22,23 +29,20 @@ const Footer = () => {
           </div>
 
           {/* Services Section */}
-          <div className="w-full px-4 lg:w-5/12 xl:w-6/12">
+          <div className="grid w-full ">
             <div className="mb-10 lg:mb-0">
-              <h2 className="mb-6 text-xl font-bold text-black dark:text-white">
+              <h3 className="mb-6 text-xl font-bold text-black dark:text-white">
                 Services
-              </h2>
-              <div className="-mx-2 flex flex-wrap">
+              </h3>
+              <div className="flex flex-wrap lg:flex-nowrap">
                 {servicesData?.map((service) => (
-                  <div
-                    key={service.title}
-                    className="mb-4 w-full px-2 sm:w-1/2"
-                  >
+                  <div key={service.title} className="mb-2 w-full sm:w-1/2">
                     <h4 className="mb-2 text-base font-semibold text-body-color dark:text-body-color-dark">
                       {service.title}
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="flex flex-col gap-3">
                       {service.subServices.map((subService) => (
-                        <li key={subService.title}>
+                        <li key={subService.title} className="mx-2">
                           <Link
                             href={`/services${subService.path}`}
                             className="text-base text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
@@ -55,11 +59,11 @@ const Footer = () => {
           </div>
 
           {/* Support & Help Section */}
-          <div className="w-full px-4 lg:w-3/12 xl:w-3/12">
+          <div className="w-full ">
             <div className="mb-10 lg:mb-0">
-              <h2 className="mb-6 text-xl font-bold text-black dark:text-white">
+              <h3 className="mb-6 text-xl font-bold text-black dark:text-white">
                 Support & Help
-              </h2>
+              </h3>
               <ul className="space-y-4">
                 <li>
                   <Link

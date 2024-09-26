@@ -11,7 +11,7 @@ const Services = () => {
 
   return (
     <section
-      id="blog"
+      id="services"
       className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28"
     >
       <div className="container">

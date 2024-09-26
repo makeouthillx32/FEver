@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import Gallery from "@/components/Common/Gallery";
 import RelatedPost from "@/components/Services/RelatedPost";
 import SharePost from "@/components/Services/SharePost";
+import SubserviceContent from "@/components/Services/SubserviceContent";
 import TagButton from "@/components/Services/TagButton";
 import useServicesData from "@/data/useServiceData";
 import { useParams, useRouter } from "next/navigation";
@@ -17,6 +18,7 @@ export default function ServicePage() {
     {
       title: "",
       paragraph: "",
+      description: "",
       path: "",
       image: [""],
     },
@@ -41,11 +43,11 @@ export default function ServicePage() {
     return null;
   }
 
-  const { title, image, paragraph } = subservice;
+  const { title, description, image } = subservice;
 
   return (
     <>
-      <Breadcrumb pageName={title} description={paragraph} />
+      <Breadcrumb pageName={title} description={description} />
 
       <Gallery />
 
@@ -53,59 +55,7 @@ export default function ServicePage() {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-8/12">
-              <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                enim lobortis scelerisque fermentum. Neque sodales ut etiam sit
-                amet. Ligula ullamcorper
-                <strong className="text-primary dark:text-white">
-                  {" "}
-                  malesuada{" "}
-                </strong>
-                proin libero nunc consequat interdum varius. Quam pellentesque
-                nec nam aliquam sem et tortor consequat. Pellentesque adipiscing
-                commodo elit at imperdiet.
-              </p>
-              <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                Semper auctor neque vitae tempus quam pellentesque nec.
-                <span className="text-primary underline dark:text-white">
-                  {" "}
-                  Amet dictum sit amet justo{" "}
-                </span>
-                donec enim diam. Varius sit amet mattis vulputate enim nulla
-                aliquet porttitor. Odio pellentesque diam volutpat commodo sed.
-              </p>
-              <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
-                Digital marketplace for Ui/Ux designers.
-              </h3>
-              <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                consectetur adipiscing elit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat mattis
-                vulputate cupidatat.
-              </p>
-              <ul className="mb-10 list-inside list-disc text-body-color">
-                <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                  Consectetur adipiscing elit in voluptate velit.
-                </li>
-                <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                  Mattis vulputate cupidatat.
-                </li>
-                <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                  Vulputate enim nulla aliquet porttitor odio pellentesque
-                </li>
-                <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                  Ligula ullamcorper malesuada proin
-                </li>
-              </ul>
-
-              <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                consectetur adipiscing elit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat mattis
-                vulputate cupidatat.
-              </p>
-              <div className="items-center justify-between sm:flex">
-                <div className="mb-5"></div>
-              </div>
+              <SubserviceContent subservice={subservice} />
             </div>
             <div className="w-full px-4 lg:w-4/12">
               <div className="mb-10 rounded-sm bg-white shadow-three dark:bg-gray-dark dark:shadow-none">
@@ -122,7 +72,7 @@ export default function ServicePage() {
                         title={service.title}
                         image="/images/blog/post-01.jpg"
                         slug={`/services/${service.path}`}
-                        date={service.paragraph}
+                        description={service.description}
                       />
                     </li>
                   ))}

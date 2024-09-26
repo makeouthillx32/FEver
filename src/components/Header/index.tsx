@@ -169,7 +169,7 @@ const Header = () => {
                               `submenu relative left-4 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark`,
                               `lg:invisible lg:absolute lg:top-[110%] lg:rounded-lg lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full`,
                               `  lg:mr-6 lg:p-4`,
-                              `${openIndex === index ? "block" : "hidden"}`,
+                              `${openIndex === index ? "flex flex-col lg:flex-row" : "hidden"}`,
                             )}
                           >
                             {serviceData.map((serviceItem) => (
@@ -179,33 +179,24 @@ const Header = () => {
                               >
                                 <p
                                   className={cn(
-                                    "cursor-default rounded py-2.5 text-xl font-medium text-dark transition dark:text-white ",
+                                    "cursor-default rounded py-2.5 text-lg text-dark transition dark:text-white ",
                                   )}
                                 >
                                   {serviceItem.title}
                                 </p>
                                 {serviceItem.subServices.map(
-                                  (subService, subIndex) =>
-                                    subService.path ? (
+                                  (subService) =>
+                                    subService.path && (
                                       <Link
                                         onClick={() => setNavbarOpen(false)}
                                         href={`/services${subService.path}`}
-                                        key={subIndex}
+                                        key={subService.title}
                                         className={cn(
-                                          "block px-4 py-1.5 text-sm font-medium text-dark transition hover:bg-primary hover:bg-opacity-10 dark:text-white",
+                                          "block  px-2 py-1.5 text-sm  text-dark transition hover:bg-primary hover:bg-opacity-10 dark:text-white",
                                         )}
                                       >
                                         {subService.title}
                                       </Link>
-                                    ) : (
-                                      <span
-                                        key={subIndex}
-                                        className={cn(
-                                          "block px-4 py-1.5 text-sm font-medium text-dark transition hover:bg-primary hover:bg-opacity-10 dark:text-white",
-                                        )}
-                                      >
-                                        {subService.title}
-                                      </span>
                                     ),
                                 )}
                               </div>

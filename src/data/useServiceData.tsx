@@ -13,21 +13,80 @@ const useServicesData = (): Services[] => {
       subServices: [
         {
           title: t("formtechnik.subServices.0.title"),
-          paragraph: t("formtechnik.subServices.0.paragraph"),
-          path: "/beratung",
+          description: t("formtechnik.subServices.0.description"),
           image: [""],
+          path: "/beratung",
+          paragraph: t("formtechnik.subServices.0.paragraph"),
+          nestedList: [
+            {
+              title: t("formtechnik.subServices.0.nestedList.0.title"),
+              list: [
+                t("formtechnik.subServices.0.nestedList.0.list.0"),
+                t("formtechnik.subServices.0.nestedList.0.list.1"),
+                t("formtechnik.subServices.0.nestedList.0.list.2"),
+                t("formtechnik.subServices.0.nestedList.0.list.3"),
+                t("formtechnik.subServices.0.nestedList.0.list.4"),
+                t("formtechnik.subServices.0.nestedList.0.list.5"),
+              ],
+            },
+            {
+              title: t("formtechnik.subServices.0.nestedList.1.title"),
+              list: [t("formtechnik.subServices.0.nestedList.1.list.0")],
+            },
+            {
+              title: t("formtechnik.subServices.0.nestedList.2.title"),
+              list: [
+                t("formtechnik.subServices.0.nestedList.2.list.0"),
+                t("formtechnik.subServices.0.nestedList.2.list.1"),
+                t("formtechnik.subServices.0.nestedList.2.list.2"),
+              ],
+            },
+          ],
+          cta: t("formtechnik.subServices.0.cta"),
         },
         {
           title: t("formtechnik.subServices.1.title"),
-          paragraph: t("formtechnik.subServices.1.paragraph"),
-          path: "/werk",
+          description: t("formtechnik.subServices.1.description"),
           image: [""],
+          path: "/werk",
+          paragraph: t("formtechnik.subServices.1.paragraph"),
+          nestedList: [
+            {
+              title: t("formtechnik.subServices.1.nestedList.0.title"),
+              list: [
+                t("formtechnik.subServices.1.nestedList.0.list.0"),
+                t("formtechnik.subServices.1.nestedList.0.list.1"),
+                t("formtechnik.subServices.1.nestedList.0.list.2"),
+                t("formtechnik.subServices.1.nestedList.0.list.3"),
+              ],
+            },
+            {
+              title: t("formtechnik.subServices.1.nestedList.1.title"),
+              list: [t("formtechnik.subServices.1.nestedList.1.list.0")],
+            },
+          ],
+          cta: t("formtechnik.subServices.1.cta"),
         },
         {
           title: t("formtechnik.subServices.2.title"),
-          paragraph: t("formtechnik.subServices.2.paragraph"),
-          path: "/abmus",
+          description: t("formtechnik.subServices.2.description"),
           image: [""],
+          path: "/abmusterung",
+          paragraph: t("formtechnik.subServices.2.paragraph"),
+          nestedList: [
+            {
+              title: t("formtechnik.subServices.2.nestedList.0.title"),
+              list: [
+                t("formtechnik.subServices.2.nestedList.0.list.0"),
+                t("formtechnik.subServices.2.nestedList.0.list.1"),
+              ],
+            },
+            {
+              title: t("formtechnik.subServices.2.nestedList.1.title"),
+              list: [t("formtechnik.subServices.2.nestedList.1.list.0")],
+            },
+          ],
+          cta: t("formtechnik.subServices.2.cta"),
         },
       ],
     },
@@ -40,51 +99,171 @@ const useServicesData = (): Services[] => {
       subServices: [
         {
           title: t("fertigung.subServices.0.title"),
-          paragraph: t("fertigung.subServices.0.paragraph"),
-          path: "/frasen",
+          description: t("fertigung.subServices.0.description"),
           image: [""],
+          path: "/frasen",
+          paragraph: t("fertigung.subServices.0.paragraph"),
+          nestedList: [
+            {
+              title: t("fertigung.subServices.0.nestedList.0.title"),
+              list: [
+                t("fertigung.subServices.0.nestedList.0.list.0"),
+                t("fertigung.subServices.0.nestedList.0.list.1"),
+              ],
+            },
+            {
+              title: t("fertigung.subServices.0.nestedList.1.title"),
+              list: [
+                t("fertigung.subServices.0.nestedList.1.list.0"),
+                t("fertigung.subServices.0.nestedList.1.list.1"),
+              ],
+            },
+          ],
+          cta: t("fertigung.subServices.0.cta"),
         },
         {
           title: t("fertigung.subServices.1.title"),
-          paragraph: t("fertigung.subServices.1.paragraph"),
-          path: "/drehen",
+          description: "",
           image: [""],
+          path: "/drehen",
+          paragraph: t("fertigung.subServices.1.paragraph"),
+          nestedList: [
+            {
+              title: t("fertigung.subServices.1.nestedList.0.title"),
+              list: [
+                t("fertigung.subServices.1.nestedList.0.list.0"),
+                t("fertigung.subServices.1.nestedList.0.list.1"),
+              ],
+            },
+            {
+              title: t("fertigung.subServices.1.nestedList.1.title"),
+              list: [
+                t("fertigung.subServices.1.nestedList.1.list.0"),
+                t("fertigung.subServices.1.nestedList.1.list.1"),
+              ],
+            },
+          ],
+          cta: t("fertigung.subServices.1.cta"),
         },
         {
           title: t("fertigung.subServices.2.title"),
-          paragraph: t("fertigung.subServices.2.paragraph"),
-          path: "/senkerodieren",
+          description: "",
           image: [""],
+          path: "/senkerodieren",
+          paragraph: t("fertigung.subServices.2.paragraph"),
+          nestedList: [
+            {
+              title: t("fertigung.subServices.2.nestedList.0.title"),
+              list: [
+                t("fertigung.subServices.2.nestedList.0.list.0"),
+                t("fertigung.subServices.2.nestedList.0.list.1"),
+                t("fertigung.subServices.2.nestedList.0.list.2"),
+              ],
+            },
+          ],
+          cta: t("fertigung.subServices.2.cta"),
         },
         {
           title: t("fertigung.subServices.3.title"),
-          paragraph: t("fertigung.subServices.3.paragraph"),
-          path: "/drahterodieren",
+          description: "",
           image: [""],
+          path: "/drahterodieren",
+          paragraph: t("fertigung.subServices.3.paragraph"),
+          nestedList: [
+            {
+              title: t("fertigung.subServices.3.nestedList.0.title"),
+              list: [
+                t("fertigung.subServices.3.nestedList.0.list.0"),
+                t("fertigung.subServices.3.nestedList.0.list.1"),
+                t("fertigung.subServices.3.nestedList.0.list.2"),
+              ],
+            },
+          ],
+          cta: t("fertigung.subServices.3.cta"),
         },
         {
           title: t("fertigung.subServices.4.title"),
-          paragraph: t("fertigung.subServices.4.paragraph"),
-          path: "/laserschwiessen",
+          description: t("fertigung.subServices.4.description"),
           image: [""],
+          path: "/laserschwiessen",
+          paragraph: t("fertigung.subServices.4.paragraph"),
+          nestedList: [
+            {
+              title: t("fertigung.subServices.4.nestedList.0.title"),
+              list: [
+                t("fertigung.subServices.4.nestedList.0.list.0"),
+                t("fertigung.subServices.4.nestedList.0.list.1"),
+              ],
+            },
+          ],
+          cta: t("fertigung.subServices.4.cta"),
         },
         {
           title: t("fertigung.subServices.5.title"),
-          paragraph: t("fertigung.subServices.5.paragraph"),
-          path: "/lasergravieren",
+          description: t("fertigung.subServices.5.description"),
           image: [""],
+          path: "/lasergravieren",
+          paragraph: t("fertigung.subServices.5.paragraph"),
+          nestedList: [
+            {
+              title: t("fertigung.subServices.5.nestedList.0.title"),
+              list: [
+                t("fertigung.subServices.5.nestedList.0.list.0"),
+                t("fertigung.subServices.5.nestedList.0.list.1"),
+              ],
+            },
+          ],
+          cta: t("fertigung.subServices.5.cta"),
         },
         {
           title: t("fertigung.subServices.6.title"),
-          paragraph: t("fertigung.subServices.6.paragraph"),
-          path: "/hochglanzpolieren",
+          description: "",
           image: [""],
+          path: "/hochglanzpolieren",
+          paragraph: t("fertigung.subServices.6.paragraph"),
+          nestedList: [
+            {
+              title: t("fertigung.subServices.6.nestedList.0.title"),
+              list: [
+                t("fertigung.subServices.6.nestedList.0.list.0"),
+                t("fertigung.subServices.6.nestedList.0.list.1"),
+                t("fertigung.subServices.6.nestedList.0.list.2"),
+                t("fertigung.subServices.6.nestedList.0.list.3"),
+              ],
+            },
+            {
+              title: t("fertigung.subServices.6.nestedList.1.title"),
+              list: [
+                t("fertigung.subServices.6.nestedList.1.list.0"),
+                t("fertigung.subServices.6.nestedList.1.list.1"),
+              ],
+            },
+          ],
+          cta: t("fertigung.subServices.6.cta"),
         },
         {
           title: t("fertigung.subServices.7.title"),
-          paragraph: t("fertigung.subServices.7.paragraph"),
-          path: "/flachschleifen",
+          description: "",
           image: [""],
+          path: "/flachschleifen",
+          paragraph: t("fertigung.subServices.7.paragraph"),
+          nestedList: [
+            {
+              title: t("fertigung.subServices.7.nestedList.0.title"),
+              list: [
+                t("fertigung.subServices.7.nestedList.0.list.0"),
+                t("fertigung.subServices.7.nestedList.0.list.1"),
+              ],
+            },
+            {
+              title: t("fertigung.subServices.7.nestedList.1.title"),
+              list: [
+                t("fertigung.subServices.7.nestedList.1.list.0"),
+                t("fertigung.subServices.7.nestedList.1.list.1"),
+              ],
+            },
+          ],
+          cta: t("fertigung.subServices.7.cta"),
         },
       ],
     },
@@ -96,21 +275,56 @@ const useServicesData = (): Services[] => {
       subServices: [
         {
           title: t("reparatur.subServices.0.title"),
-          paragraph: t("reparatur.subServices.0.paragraph"),
-          path: "/beratung",
+          description: t("reparatur.subServices.0.description"),
           image: [""],
+          path: "/beratung",
+          paragraph: t("reparatur.subServices.0.paragraph"),
+          nestedList: [
+            {
+              title: t("reparatur.subServices.0.nestedList.0.title"),
+              list: [
+                t("reparatur.subServices.0.nestedList.0.list.0"),
+                t("reparatur.subServices.0.nestedList.0.list.1"),
+              ],
+            },
+          ],
+          cta: t("reparatur.subServices.0.cta"),
         },
         {
           title: t("reparatur.subServices.1.title"),
-          paragraph: t("reparatur.subServices.1.paragraph"),
-          path: "/werk",
+          description: t("reparatur.subServices.1.description"),
           image: [""],
+          path: "/werk",
+          paragraph: t("reparatur.subServices.1.paragraph"),
+          nestedList: [
+            {
+              title: t("reparatur.subServices.1.nestedList.0.title"),
+              list: [
+                t("reparatur.subServices.1.nestedList.0.list.0"),
+                t("reparatur.subServices.1.nestedList.0.list.1"),
+                t("reparatur.subServices.1.nestedList.0.list.2"),
+              ],
+            },
+          ],
+          cta: t("reparatur.subServices.1.cta"),
         },
         {
           title: t("reparatur.subServices.2.title"),
-          paragraph: t("reparatur.subServices.2.paragraph"),
-          path: "/abmus",
+          description: "",
           image: [""],
+          path: "/abmus",
+          paragraph: t("reparatur.subServices.2.paragraph"),
+          nestedList: [
+            {
+              title: t("reparatur.subServices.2.nestedList.0.title"),
+              list: [
+                t("reparatur.subServices.2.nestedList.0.list.0"),
+                t("reparatur.subServices.2.nestedList.0.list.1"),
+                t("reparatur.subServices.2.nestedList.0.list.2"),
+              ],
+            },
+          ],
+          cta: t("reparatur.subServices.2.cta"),
         },
       ],
     },

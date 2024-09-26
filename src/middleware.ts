@@ -1,10 +1,10 @@
 import { createI18nMiddleware } from "next-international/middleware";
-import { NextRequest  } from "next/server";
+import { NextRequest } from "next/server";
 
 const I18nMiddleware = createI18nMiddleware({
   locales: ["en", "de"],
   defaultLocale: "de",
-  // urlMappingStrategy: "rewrite",
+  // urlMappingStrategy: "rewrite"
 });
 
 export function middleware(request: NextRequest) {

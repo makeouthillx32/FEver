@@ -9,14 +9,22 @@ export type Services = {
   paragraph: string;
   image: string;
   tags: string[];
-  subServices: subServices[];
+  subServices: subService[];
 };
 
-export type subServices = {
+export type subService = {
   title: string;
-  paragraph: string;
-  path: string;
+  description: string;
   image: string[];
+  path: string;
+  paragraph: string;
+  nestedList: bulletList[];
+  cta: string;
+};
+
+type bulletList = {
+  title: string;
+  list: string[];
 };
 
 export type Brand = {
