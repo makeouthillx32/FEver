@@ -3,6 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Error Page ",
+  description: "This is Contact Page for Startup Nextjs Template",
   // other metadata
 };
 

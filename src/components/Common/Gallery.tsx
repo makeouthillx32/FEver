@@ -45,8 +45,8 @@ export default function Gallery({
                   modules={[FreeMode, Navigation, Thumbs]}
                   className="mySwiper2"
                 >
-                  {images.map((image) => (
-                    <SwiperSlide key={image}>
+                  {images.map((image, index) => (
+                    <SwiperSlide key={image + index}>
                       <Image
                         src={image}
                         alt={serviceTitle + "-big-swiper-image"}
@@ -66,8 +66,8 @@ export default function Gallery({
                   modules={[FreeMode, Navigation, Thumbs]}
                   className="mySwiper"
                 >
-                  {images.map((image) => (
-                    <SwiperSlide key={image}>
+                  {images.map((image, index) => (
+                    <SwiperSlide key={image + index}>
                       <Image
                         src={image}
                         alt={serviceTitle + "-small-swiper-image"}

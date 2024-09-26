@@ -9,7 +9,7 @@ import SectionTitle from "@/components/Common/SectionTitle";
 import Video from "@/components/Video";
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
+  title: "About Page | Formen Werkstatt",
   description: "This is About Page for Startup Nextjs Template",
   // other metadata
 };
