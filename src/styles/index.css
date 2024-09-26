@@ -71,6 +71,11 @@
 .mySwiper2 {
   height: 80%;
   width: 100%;
+  cursor: grab;
+}
+
+.mySwiper2:active {
+  cursor: grabbing;
 }
 
 .mySwiper {
@@ -83,6 +88,7 @@
   width: 25%;
   height: 100%;
   opacity: 0.4;
+  cursor: pointer;
 }
 
 .mySwiper .swiper-slide-thumb-active {

@@ -15,7 +15,7 @@ export type Services = {
 export type subService = {
   title: string;
   description: string;
-  image: string[];
+  images: string[];
   path: string;
   paragraph: string;
   nestedList: bulletList[];

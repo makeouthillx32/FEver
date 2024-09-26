@@ -11,9 +11,15 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { useState } from "react";
 import Image from "next/image";
 
-export default function Gallery() {
-  const [isOpen, setOpen] = useState(false);
-  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null); // Specify SwiperType | null
+export default function Gallery({
+  serviceTitle,
+  images,
+}: {
+  serviceTitle: string;
+  images: string[];
+}) {
+  // const [isOpen, setOpen] = useState(false);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
     <section className=" relative pb-16 md:pb-20 lg:pb-28">
@@ -39,46 +45,16 @@ export default function Gallery() {
                   modules={[FreeMode, Navigation, Thumbs]}
                   className="mySwiper2"
                 >
-                  <SwiperSlide>
-                    <Image
-                      src="/images/blog/blog-details-01.jpg"
-                      alt="swiper-image"
-                      width={768}
-                      height={432}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/blog/blog-details-01.jpg"
-                      alt="swiper-image"
-                      width={768}
-                      height={432}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/blog/blog-details-01.jpg"
-                      alt="swiper-image"
-                      width={768}
-                      height={432}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/blog/blog-details-01.jpg"
-                      alt="swiper-image"
-                      width={768}
-                      height={432}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/blog/blog-details-01.jpg"
-                      alt="swiper-image"
-                      width={768}
-                      height={432}
-                    />
-                  </SwiperSlide>
+                  {images.map((image) => (
+                    <SwiperSlide key={image}>
+                      <Image
+                        src={image}
+                        alt={serviceTitle + "-big-swiper-image"}
+                        width={768}
+                        height={432}
+                      />
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
                 <Swiper
                   onSwiper={setThumbsSwiper}
@@ -90,46 +66,16 @@ export default function Gallery() {
                   modules={[FreeMode, Navigation, Thumbs]}
                   className="mySwiper"
                 >
-                  <SwiperSlide>
-                    <Image
-                      src="/images/blog/blog-details-01.jpg"
-                      alt="swiper-image"
-                      width={768}
-                      height={432}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/blog/blog-details-01.jpg"
-                      alt="swiper-image"
-                      width={768}
-                      height={432}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/blog/blog-details-01.jpg"
-                      alt="swiper-image"
-                      width={768}
-                      height={432}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/blog/blog-details-01.jpg"
-                      alt="swiper-image"
-                      width={768}
-                      height={432}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/blog/blog-details-01.jpg"
-                      alt="swiper-image"
-                      width={768}
-                      height={432}
-                    />
-                  </SwiperSlide>
+                  {images.map((image) => (
+                    <SwiperSlide key={image}>
+                      <Image
+                        src={image}
+                        alt={serviceTitle + "-small-swiper-image"}
+                        width={768}
+                        height={432}
+                      />
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
             </div>

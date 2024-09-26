@@ -36,13 +36,13 @@ export default function ServicePage() {
     return null;
   }
 
-  const { title, description, image } = subservice;
+  const { title, description, images } = subservice;
 
   return (
     <>
       <Breadcrumb pageName={title} description={description} />
 
-      <Gallery />
+      <Gallery serviceTitle={title} images={images} />
 
       <section className="overflow-hidden pb-[120px] ">
         <div className="container">
@@ -57,10 +57,7 @@ export default function ServicePage() {
                 </h3>
                 <ul className="p-4">
                   {relatedPosts.map((service, index) => (
-                    <li
-                      key={service.title + index}
-                      
-                    >
+                    <li key={service.title + index}>
                       <RelatedPost
                         title={service.title}
                         image="/images/blog/post-01.jpg"
