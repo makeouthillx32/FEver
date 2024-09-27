@@ -1,4 +1,3 @@
-import { getScopedI18n } from "@/locales/server";
 import { Metadata } from "next";
 
 export async function generateMetadata({

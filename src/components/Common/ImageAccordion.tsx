@@ -1,27 +1,26 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const items = [
   {
     id: "1",
     url: "https://res.cloudinary.com/dzl9yxixg/image/upload/adrian_ibdgmu.png",
-    title: "Adrian Paul",
-    description: "COO & Co-Founder",
+    title: "Bektas Isik",
+    description: "Founder",
     tags: ["Floral", "Highlands", "Wildflowers", "Colorful", "Resilience"],
   },
 
   {
     id: "2",
     url: "https://res.cloudinary.com/dzl9yxixg/image/upload/person-portrait_pwxyyj.jpg",
-    title: "Flualy Cual",
-    description: "Founder & CEO",
+    title: "Belgin Isik",
+    description: "Founder",
     tags: ["Twilight", "Peaks", "Silhouette", "Evening Sky", "Peaceful"],
   },
   {
     id: "3",
     url: "https://res.cloudinary.com/dzl9yxixg/image/upload/naymr_bmv5ac.png",
-    title: "Naymur Rahman",
-    description: "CTO & Co-Founder",
+    title: "Huseyin Isik",
+    description: "Founder",
     tags: ["Rocky", "Ridges", "Contrast", "Adventure", "Clouds"],
   },
 ];
