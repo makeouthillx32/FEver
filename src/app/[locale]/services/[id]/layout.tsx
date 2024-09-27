@@ -1,6 +1,5 @@
-import useServicesData from "@/data/useServiceData";
+import { getScopedI18n } from "@/locales/server";
 import { Metadata } from "next";
-import { useParams } from "next/navigation";
 
 export async function generateMetadata({
   params,
@@ -9,9 +8,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = params;
 
+  let str = id.replace(/-/g, " ");
+  str = str.charAt(0).toUpperCase() + str.slice(1);
+
   return {
-    title: id || "Default Title",
-    description: id || "Default Description",
+    title: `Services | Formen Werkstatt` || "Default Title",
+    description: str || "Default Description",
   };
 }
 

@@ -52,6 +52,8 @@ export default async function Contact() {
                         Name
                       </label>
                       <input
+                        id="name"
+                        name="name"
                         type="text"
                         placeholder="Name"
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-4 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:focus:border-primary"
@@ -67,6 +69,8 @@ export default async function Contact() {
                         Email
                       </label>
                       <input
+                        id="email"
+                        name="email"
                         type="email"
                         placeholder="Email"
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-4 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:focus:border-primary"
@@ -82,6 +86,7 @@ export default async function Contact() {
                         Message
                       </label>
                       <textarea
+                        id="message"
                         name="message"
                         rows={5}
                         placeholder={t("form.textarea")}
@@ -90,7 +95,10 @@ export default async function Contact() {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-sm bg-primary px-6 py-3 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
+                    <button
+                      type="submit"
+                      className="rounded-sm bg-primary px-6 py-3 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                    >
                       {t("form.submit")}
                     </button>
                   </div>
