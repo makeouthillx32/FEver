@@ -1,9 +1,5 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-
 import { Metadata } from "next";
 import { getScopedI18n } from "@/locales/server";
-import AboutCard from "@/components/Common/JobCard";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import SectionTitle from "@/components/Common/SectionTitle";
 import Video from "@/components/Video";
@@ -38,8 +34,6 @@ export default async function AboutPage() {
           <ImageAccordion />
         </div>
 
-        {/* <AboutSectionOne />
-        <AboutSectionTwo /> */}
       </section>
     </>
   );
