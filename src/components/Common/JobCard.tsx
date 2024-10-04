@@ -4,13 +4,12 @@ import Link from "next/link";
 export default function JobCard({
   title = "Initiative Bewerbung",
   description = "Wir helfen dir gerne, die beste Loesung zu finden.",
+  slug,
 }: {
   title?: string;
   description?: string;
+  slug: string;
 }) {
-  
-  const slug = "initiative-bewerbung";
-
   return (
     <div className="group relative overflow-hidden rounded-sm bg-white shadow-two duration-300 hover:shadow-three dark:bg-dark dark:hover:shadow-gray-dark">
       {/* Main Content */}

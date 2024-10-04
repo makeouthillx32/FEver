@@ -6,23 +6,14 @@ import SharePost from "@/components/Services/SharePost";
 
 import TagButton from "@/components/Services/TagButton";
 
-import { useParams, useRouter } from "next/navigation";
+
 
 export default function JobPage() {
-  const { id } = useParams();
-  const router = useRouter();
-
-  const title = "job title";
-  const description = "job description";
-  const images = [""];
-
-
-
   return (
     <>
-      <Breadcrumb pageName={title} description={description} />
+      <Breadcrumb pageName={"Job title"} description={"description"} />
 
-      <Gallery serviceTitle={title} images={images} />
+      {/* <Gallery serviceTitle={title} images={images} /> */}
 
       <section className="overflow-hidden pb-[120px] ">
         <div className="container">

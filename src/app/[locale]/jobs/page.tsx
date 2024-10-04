@@ -27,9 +27,9 @@ export default function Jobs() {
           />
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 xl:grid-cols-3">
-            <JobCard />
-            <JobCard />
-            <JobCard />
+            <JobCard slug={'initiative-bewerbung'}/>
+            <JobCard slug={'initiative-bewerbung'}/>
+            <JobCard slug={'initiative-bewerbung'}/>
           </div>
         </div>
 
