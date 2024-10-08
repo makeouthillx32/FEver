@@ -12,10 +12,10 @@ import { useParams } from "next/navigation";
 import { useRouter } from "next/router";
 
 export default function JobPage() {
-  const router = useRouter();
   const { slug } = useParams();
   const jobs = useJobsData();
 
+  const router = useRouter();
   const job = jobs.ads.find((ad) => ad.slug === slug);
 
   if (!job) {

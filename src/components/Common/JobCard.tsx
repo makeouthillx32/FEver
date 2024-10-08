@@ -38,7 +38,7 @@ export default function JobCard({
       {/* Hover Overlay */}
       <div className="absolute inset-0 z-30 flex items-center justify-center bg-white bg-opacity-70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <Link
-          href={`jobs/${slug}`}
+          href={`/${slug}`}
           className="inline-block rounded-full bg-primary px-8 py-4 text-xl text-white transition-transform duration-300 hover:scale-105"
         >
           Jetzt Bewerben

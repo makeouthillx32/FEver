@@ -1,3 +1,4 @@
+"use client";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import SectionTitle from "@/components/Common/SectionTitle";
 import JobCard from "@/components/Common/JobCard";
@@ -26,7 +27,6 @@ export default function Jobs() {
             {jobs.ads.map((ad) => (
               <JobCard key={ad.slug} slug={ad.slug} />
             ))}
-
           </div>
         </div>
 
