@@ -9,6 +9,7 @@ const TEMP_IMAGES = [
   "/images/blog/blog-details-01.jpg",
   "/images/blog/blog-details-02.jpg",
 ];
+
 const useServicesData = (): Services[] => {
   const t = useScopedI18n("services");
 

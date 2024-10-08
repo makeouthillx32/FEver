@@ -27,17 +27,31 @@ type bulletList = {
   list: string[];
 };
 
-export type Brand = {
-  id: number;
-  name: string;
-  href: string;
-  image: string;
-  imageLight?: string;
-};
-
-export type Feature = {
-  id: number;
-  icon: JSX.Element;
+export type Jobs = {
   title: string;
   paragraph: string;
+  ads: Ad[];
 };
+
+type Ad = {
+  title: string;
+  slug: string;
+  image: string;
+  description: string;
+  paragraph: string;
+};
+
+// export type Brand = {
+//   id: number;
+//   name: string;
+//   href: string;
+//   image: string;
+//   imageLight?: string;
+// };
+
+// export type Feature = {
+//   id: number;
+//   icon: JSX.Element;
+//   title: string;
+//   paragraph: string;
+// };

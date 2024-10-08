@@ -1,18 +1,14 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import SectionTitle from "@/components/Common/SectionTitle";
 import JobCard from "@/components/Common/JobCard";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Jobs | Formenwerkstatt",
-  description: "This is Contact Page for Startup Nextjs Template",
-  // other metadata
-};
+import useJobsData from "@/data/useJobsData";
 
 export default function Jobs() {
+  const jobs = useJobsData();
+
   return (
     <>
-      <Breadcrumb pageName={"Jobs"} description={"bei Formenwerkstatt"} />
+      <Breadcrumb pageName={jobs.title} description={jobs.paragraph} />
 
       <section
         id="jobs"
@@ -27,9 +23,10 @@ export default function Jobs() {
           />
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 xl:grid-cols-3">
-            <JobCard slug={'initiative-bewerbung'}/>
-            <JobCard slug={'initiative-bewerbung'}/>
-            <JobCard slug={'initiative-bewerbung'}/>
+            {jobs.ads.map((ad) => (
+              <JobCard key={ad.slug} slug={ad.slug} />
+            ))}
+
           </div>
         </div>
 

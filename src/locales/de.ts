@@ -17,32 +17,32 @@ export default {
 
   services: {
     formtechnik: {
-      title: "Formenbau",
+      title: "Formentechnik",
       paragraph: "Wir bauen Ihre Formen mit den richtigen Werkzeugen",
       subServices: [
         {
           title: "Beratung & Design",
-          description: "Profitieren Sie von unserer umfangreichen Erfahrung",
+          description: "Profitieren Sie von unserer Erfahrung",
           paragraph:
-            "Jede Form ist einzigartig, beeinflusst von der Geometrie des Teils und dem zu injizierenden Material. Wir sind spezialisiert auf Mehrkomponenten-Werkzeuge und den In-Mold-Prozess.",
+            'Jede Form ist anders, da die Geometrie des Teils und das zu spritzende Material maßgeblichen Einfluss nehmen.Mit stets aktueller CAD/CAM-Software im eigenen Haus entsteht Ihre Form - gut durchdacht, in kurzer Zeit, zum guten Preis. Vor allem wenn Ihr Produkt perfekte Oberflächen benötigt, profitieren Sie von unserem "Alles aus einer Hand"-Konzept, inkl. Hochglanzpolitur und Laserbeschriftungen.',
           nestedList: [
             {
-              title: "Expertise in verschiedenen Branchen:",
+              title: "Wir haben Erfahrung mit Werkzeugen aus dem Bereich:",
               list: [
-                "Automobil",
+                "Automobilindustrie ",
                 "Haushaltsgeräte",
                 "Hochspannungsisolatoren",
                 "Gehäuse für elektronische Geräte",
-                "Verpackung",
+                "Verpackungen",
                 "Medizinische Artikel",
               ],
             },
             {
-              title: "Materialexpertise:",
+              title: "Materialkompetenz:",
               list: ["PE, PP, PC, PVC, Gummi, Silikon"],
             },
             {
-              title: "Fortschrittliche Software & Technologie:",
+              title: "Moderne Software & Technologie:",
               list: [
                 "SolidWorks, Siemens NX CAD/CAM-Integration",
                 "Importformate: STEP, DXF und mehr",
@@ -50,53 +50,52 @@ export default {
               ],
             },
           ],
-          cta: "Kontaktieren Sie uns, um zu besprechen, wie wir Ihr Formenkonzept mit Präzision und Effizienz zum Leben erwecken können.",
+          cta: "Kontaktieren Sie uns, um zu besprechen, wie wir Ihr Werkzeugkonzept präzise und effizient umsetzen können.",
         },
         {
           title: "Werkzeugherstellung",
           description: "Ihr Design ist erst der Anfang",
           paragraph:
-            "Nach der Genehmigung gehen wir nahtlos zur Fertigungsphase über. Wir nutzen modernste Ausrüstung, um Ihre Form präzise zu fräsen, zu drehen und zu schleifen. Unsere Maschinen liefern außergewöhnliche Toleranzen bis zu wenigen Mikrometern, während unsere speziellen Poliertechniken für spiegelglatte Oberflächen sorgen.",
+            "Sobald die Freigabe erfolgt, gehen wir nahtlos in die Herstellungsphase über. Mit modernster Ausrüstung fräsen, drehen und schleifen wir Ihr Werkzeug bis zur Perfektion. Unsere Maschinen erreichen außergewöhnliche Toleranzen von wenigen Mikrometern, während unsere speziellen Poliertechniken einen spiegelnden Finish gewährleisten.",
           nestedList: [
             {
-              title: "Prozesse beinhalten:",
+              title: "Prozesse umfassen:",
               list: [
                 "3D-Fräsen",
-                "Hochpräzisionsdrehbearbeitung",
-                "Ultrafeine Schleifbearbeitung",
-                "Spezialisiertes Polieren",
+                "Hochpräzises Drehen",
+                "Ultra-feines Schleifen",
+                "Spezialisierte Polieren",
               ],
             },
             {
               title: "Alles unter einem Dach:",
               list: [
-                "Werkzeugherstellung, Endbearbeitung und Verbesserungen werden alle intern durchgeführt, was Synchronisation und Kosteneffizienz garantiert.",
+                "Werkzeugherstellung, -veredelung und -verbesserungen erfolgen alle intern, was Synchronisation und Kosteneffizienz garantiert",
               ],
             },
           ],
-          cta: "Bereit loszulegen? Kontaktieren Sie uns noch heute für weitere Informationen zu unseren Werkzeugfertigungsdiensten!",
+          cta: "Bereit, loszulegen? Kontaktieren Sie uns noch heute für weitere Informationen.",
         },
         {
-          title: "Abmusterung & Kleinserienfertigung",
-          description: "Wir hören bei der Werkzeugproduktion nicht auf",
+          title: "Abmusterung & Kleinserienproduktion",
+          description: "Wir hören nicht bei der Werkzeugproduktion auf",
           paragraph:
-            "Sobald Ihr Werkzeug fertig ist, führen wir einen umfassenden Bemusterungsprozess durch, um seine Funktionalität sicherzustellen, gefolgt von Kleinserienproduktionsläufen. Unsere modernen Spritzgießmaschinen sind mit fortschrittlichen Robotersystemen für effiziente Teileentnahme und Übermoldingfähigkeiten ausgestattet.",
+            "Sobald Ihr Werkzeug hergestellt wurde, führen wir eine umfassende Abmusterung durch, um die Funktionalität sicherzustellen, gefolgt von Kleinserienproduktion.",
           nestedList: [
             {
-              title: "Maschinenspezifikationen:",
+              title: "Maschine Spezifikationen:",
               list: [
-                "Arburg 520 C: 2000 kN Schließkraft, Wittmann-Roboter für automatisierte Teileentnahme",
                 "Boy 22 M: 220 kN Schließkraft, präzise Kleinteileproduktion",
               ],
             },
             {
-              title: "Übermolden und Insert-Molding:",
+              title: 'Überspritzen ("Overmolding") und Einlegemolding',
               list: [
-                "Ideal für die Integration von Etiketten oder anderen Einsätzen in die Form.",
+                " Ideal zur Integration von Etiketten oder anderen Einlagen in das Werkzeug.",
               ],
             },
           ],
-          cta: "Benötigen Sie hochwertige Bemusterung und Kleinserienproduktion? Kontaktieren Sie unser Team, um zu erfahren, wie wir Ihr Projekt unterstützen können.",
+          cta: "Brauchen Sie hochwertige Probenahme und kleine Produktionsläufe? Kontaktieren Sie unser Team, um zu erfahren, wie wir Ihr Projekt unterstützen können.",
         },
       ],
     },
@@ -109,10 +108,10 @@ export default {
           title: "Fräsen",
           description: "Präzision trifft auf Effizienz",
           paragraph:
-            "Unsere Hochgeschwindigkeits-CNC-Fräsmaschinen produzieren selbst komplexeste Geometrien mit unübertroffener Präzision. Ob Sie mit Stahl, Aluminium oder anderen Materialien arbeiten, unsere Ausrüstung gewährleistet enge Toleranzen und makellose Oberflächen.",
+            "Unsere Hochgeschwindigkeits-CNC-Fräsmaschinen produzieren selbst die komplexesten Geometrien mit unvergleichlicher Präzision. Egal, ob Sie mit Stahl, Aluminium oder anderen Materialien arbeiten, unsere Geräte gewährleisten enge Toleranzen und makellose Oberflächen.",
           nestedList: [
             {
-              title: "Schlüsselausrüstung:",
+              title: "Hauptgeräte:",
               list: [
                 "Deckel Maho CNC-Maschinen: Siemens-gesteuert für detailliertes und genaues Fräsen",
                 "Mikron HSM 500: Hochgeschwindigkeitsfräsen für feine Details, bis zu 30.000 U/min",
@@ -345,5 +344,14 @@ export default {
     paragraph: "Formen Werkstatt, wo Innovation auf Präzision trifft.",
     description:
       "Im Herzen von Reichelsheim, Odenwald, sind wir darauf spezialisiert, Ihre Ideen in greifbare Ergebnisse zu verwandeln. Unser voll ausgestattetes Werk ermöglicht es uns, ein umfassendes Dienstleistungsangebot von der Formenherstellung bis hin zur hochpräzisen Maschinenbearbeitung anzubieten. ",
+  },
+
+  jobs: {
+    title: "",
+    paragraph: "",
+    ads: [
+      { title: "", image: "", description: "", paragraph: "" },
+      { title: "", image: "", description: "", paragraph: "" },
+    ],
   },
 } as const;

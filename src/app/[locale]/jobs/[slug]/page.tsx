@@ -7,20 +7,32 @@ import RelatedPost from "@/components/Services/RelatedPost";
 import SharePost from "@/components/Services/SharePost";
 
 import TagButton from "@/components/Services/TagButton";
+import useJobsData from "@/data/useJobsData";
+import { useParams } from "next/navigation";
+import { useRouter } from "next/router";
 
 export default function JobPage() {
+  const router = useRouter();
+  const { slug } = useParams();
+  const jobs = useJobsData();
+
+  const job = jobs.ads.find((ad) => ad.slug === slug);
+
+  if (!job) {
+    router.push("/error");
+    return null;
+  }
+
   return (
     <>
-      <Breadcrumb pageName={"Job title"} description={"description"} />
+      <Breadcrumb pageName={job.title} description={job.description} />
 
       {/* <Gallery serviceTitle={title} images={images} /> */}
 
       <section className="overflow-hidden pb-[120px] ">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <article className="w-full px-4 lg:w-8/12">
-              JOB PAGE CONTENT
-            </article>
+            <article className="w-full px-4 lg:w-8/12">{job.paragraph}</article>
 
             <AboutSectionOne />
             <AboutSectionTwo />

@@ -162,7 +162,7 @@ export default {
               list: [
                 "Workpiece size up to 840 x 600 mm",
                 "Custom electrode manufacturing for high detail",
-                "Weight capacity up to 600 kg"
+                "Weight capacity up to 600 kg",
               ],
             },
           ],
@@ -345,5 +345,14 @@ export default {
     paragraph: "Mold Workshop, where innovation meets precision.",
     description:
       "In the heart of Reichelsheim, Odenwald, we specialize in turning your ideas into tangible results. Our fully equipped facility enables us to offer a comprehensive range of services from mold-making to high-precision machining.",
+  },
+
+  jobs: {
+    title: "",
+    paragraph: "",
+    ads: [
+      { title: "", image: "", description: "", paragraph: "" },
+      { title: "", image: "", description: "", paragraph: "" },
+    ],
   },
 } as const;
