@@ -3,7 +3,7 @@ import Image from "next/image";
 const items = [
   {
     id: "1",
-    url: "https://res.cloudinary.com/dzl9yxixg/image/upload/adrian_ibdgmu.png",
+    url: "/images/testimonials/auth-01.png",
     title: "Bektas Isik",
     description: "Founder",
     tags: ["Floral", "Highlands", "Wildflowers", "Colorful", "Resilience"],
@@ -11,14 +11,14 @@ const items = [
 
   {
     id: "2",
-    url: "https://res.cloudinary.com/dzl9yxixg/image/upload/person-portrait_pwxyyj.jpg",
+    url: "/images/testimonials/auth-01.png",
     title: "Belgin Isik",
     description: "Founder",
     tags: ["Twilight", "Peaks", "Silhouette", "Evening Sky", "Peaceful"],
   },
   {
     id: "3",
-    url: "https://res.cloudinary.com/dzl9yxixg/image/upload/naymr_bmv5ac.png",
+    url: "/images/testimonials/auth-01.png",
     title: "Huseyin Isik",
     description: "Founder",
     tags: ["Rocky", "Ridges", "Contrast", "Adventure", "Clouds"],

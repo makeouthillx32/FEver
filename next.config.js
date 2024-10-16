@@ -7,13 +7,9 @@ const nextConfig = {
         hostname: "cdn.sanity.io",
         port: "",
       },
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        port: "",
-      },
     ],
   },
+  transpilePackages: ["three"],
 };
 
 module.exports = nextConfig;
